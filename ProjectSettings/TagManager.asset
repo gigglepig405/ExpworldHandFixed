@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Main
+  - Puppet
+  - SamplesInfoPanel
+  - TaskPainter
+  - CubeSnapper
+  - TaskCube
+  - TaskArea_Pick
+  - TaskArea_Put
+  - TaskSelf_Head
+  - TaskPartner_Head
+  - TaskSelf_Hand
+  - TaskPartner_Hand
+  - TaskSelf_ETC
+  - TaskPartner_ETC
+  - Task_3DHead
+  - TaskButton
+  - quizFinger
+  - Orb
+  - TeleportSurface
+  - PortalGaze
+  - EmpMirror
+  - GazeCollider
+  - EmotionHelper
+  - GazePoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Portal
+  - Water
+  - UI
+  - Teleport Valid
+  - GroupA
+  - GroupB
+  - 
+  - Character
+  - MirroredCharacter
+  - HiddenMesh
+  - EmpBarrier
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
