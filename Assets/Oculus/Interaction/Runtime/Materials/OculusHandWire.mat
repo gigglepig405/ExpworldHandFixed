@@ -25,14 +25,17 @@ Material:
   m_ValidKeywords:
   - _EMISSION
   - _SPECULAR_SETUP
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses: []
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -125,7 +128,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EnableConfidence: 0
     - _EnvironmentReflections: 1
     - _Fresnel: 1
@@ -163,8 +166,8 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Surface: 0
+    - _SrcBlend: 5
+    - _Surface: 1
     - _TextureOpacity: 1
     - _ThumbGlowValue: 0
     - _UVSec: 0
@@ -172,11 +175,11 @@ Material:
     - _WorkflowMode: 0
     - _WristFade: 0
     - _WristRange: 0.06
-    - _ZWrite: 1
+    - _ZWrite: 0
     - __dirty: 0
     m_Colors:
-    - _BaseColor: {r: 0.509434, g: 0.507031, b: 0.507031, a: 0.6745098}
-    - _Color: {r: 0.509434, g: 0.507031, b: 0.507031, a: 0.6745098}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0.19607843}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.19607843}
     - _ColorBottom: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     - _ColorPrimary: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
     - _ColorSecondary: {r: 1, g: 0.8443396, b: 0.8443396, a: 1}

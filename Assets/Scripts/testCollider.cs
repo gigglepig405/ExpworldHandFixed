@@ -18,16 +18,16 @@ public class testCollider : MonoBehaviour
 
     Transform staticPos;
 
-    private void Start()
-    {
-        ball = GameObject.Find("HeadDirectionTarget");
-        tm = GameObject.Find("TaskManager").GetComponent<TaskManagerScript>();
+    //private void Start()
+    //{
+        //ball = GameObject.Find("HeadDirectionTarget");
+        //tm = GameObject.Find("TaskManager").GetComponent<TaskManagerScript>();
 
-        if (tm.useEmpMirror)
-        {
-            staticPos = GameObject.Find("StaticMirrorPos").transform;
-        }
-    }
+        //if (tm.useEmpMirror)
+       // {
+           // staticPos = GameObject.Find("StaticMirrorPos").transform;
+        //}
+   // }
 
     public void initMirrorHead()
     {

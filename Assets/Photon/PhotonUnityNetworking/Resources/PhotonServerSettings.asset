@@ -45,6 +45,8 @@ MonoBehaviour:
   - networkStartRecord
   - UpdateNetworkObjEmo
   - UpdateNetworkPartnerEmotion
+  - SyncGrab
+  - SyncRelease
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

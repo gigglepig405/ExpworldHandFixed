@@ -57,7 +57,7 @@ public class NetworkPlayerGestureSync : MonoBehaviourPunCallbacks
             bootFaceSync = true;
         }
 
-        tm = GameObject.Find("TaskManager").GetComponent<TaskManagerScript>();
+        //tm = GameObject.Find("TaskManager").GetComponent<TaskManagerScript>();
         //startPlayback = true; //enable facial expression immediately for Quest user
 
     }
