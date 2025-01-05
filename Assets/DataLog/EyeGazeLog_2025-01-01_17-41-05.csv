@@ -1,0 +1,807 @@
+Timestamp,FocusOBJ,HitPointX,HitPointY,HitPointZ,DidHit,GazeDuration,Cache
+17:41:05.484,None,0,0,0,False,0,
+17:41:05.577,None,0,0,0,False,0,
+17:41:05.609,Untagged,-4.546602,1.687904,2.42,True,0.045917,Untagged
+17:41:05.621,Untagged,-4.548252,1.687062,2.42,True,0.0600557,Untagged
+17:41:05.634,Untagged,-4.547937,1.687148,2.42,True,0.0710841,Untagged
+17:41:05.647,Untagged,-4.547431,1.687268,2.42,True,0.0844343,Untagged
+17:41:05.661,Untagged,-4.547408,1.687034,2.42,True,0.0980275,Untagged
+17:41:05.673,Untagged,-4.547058,1.686929,2.42,True,0.1126105,Untagged
+17:41:05.689,Untagged,-4.547005,1.68741,2.42,True,0.1257028,Untagged
+17:41:05.701,Untagged,-4.546623,1.687991,2.42,True,0.1395484,Untagged
+17:41:05.716,Untagged,-4.546342,1.689013,2.42,True,0.1534699,Untagged
+17:41:05.730,Untagged,-4.545856,1.689294,2.42,True,0.16785,Untagged
+17:41:05.743,Untagged,-4.54558,1.689051,2.42,True,0.1813411,Untagged
+17:41:05.757,Untagged,-4.546111,1.688937,2.42,True,0.1941302,Untagged
+17:41:05.770,Untagged,-4.546371,1.688771,2.42,True,0.2083391,Untagged
+17:41:05.784,Untagged,-4.546725,1.688104,2.42,True,0.2229416,Untagged
+17:41:05.797,Untagged,-4.546507,1.687666,2.42,True,0.2363462,Untagged
+17:41:05.811,Untagged,-4.546715,1.687844,2.42,True,0.2502047,Untagged
+17:41:05.826,Untagged,-4.546674,1.687886,2.42,True,0.2630589,Untagged
+17:41:05.840,Untagged,-4.54692,1.688187,2.42,True,0.2769395,Untagged
+17:41:05.853,Untagged,-4.546805,1.68822,2.42,True,0.2902457,Untagged
+17:41:05.866,Untagged,-4.546566,1.688068,2.42,True,0.3040506,Untagged
+17:41:05.881,Untagged,-4.546283,1.687841,2.42,True,0.3183739,Untagged
+17:41:05.895,Untagged,-4.545978,1.687461,2.42,True,0.3319639,Untagged
+17:41:05.908,Untagged,-4.546168,1.687801,2.42,True,0.3454626,Untagged
+17:41:05.923,Untagged,-4.546225,1.688099,2.42,True,0.3599469,Untagged
+17:41:05.936,Untagged,-4.546404,1.688293,2.42,True,0.3735895,Untagged
+17:41:05.951,Untagged,-4.546257,1.688432,2.42,True,0.3869946,Untagged
+17:41:05.964,Untagged,-4.546073,1.688359,2.42,True,0.4011448,Untagged
+17:41:05.978,Untagged,-4.545922,1.688201,2.42,True,0.4151024,Untagged
+17:41:05.991,Untagged,-4.545498,1.687613,2.42,True,0.4291189,Untagged
+17:41:06.006,Untagged,-4.545646,1.687642,2.42,True,0.4429075,Untagged
+17:41:06.020,Untagged,-4.545633,1.687906,2.42,True,0.4569813,Untagged
+17:41:06.033,Untagged,-4.54598,1.688621,2.42,True,0.4707717,Untagged
+17:41:06.048,Untagged,-4.546214,1.689189,2.42,True,0.4844504,Untagged
+17:41:06.061,Untagged,-4.546554,1.689515,2.42,True,0.4992884,Untagged
+17:41:06.074,Untagged,-4.546885,1.689435,2.42,True,0.5126324,Untagged
+17:41:06.090,Untagged,-4.547168,1.688727,2.42,True,0.5259727,Untagged
+17:41:06.104,Untagged,-4.54773,1.688338,2.42,True,0.5405277,Untagged
+17:41:06.118,Untagged,-4.55319,1.691199,2.42,True,0.5548725,Untagged
+17:41:06.131,Untagged,-4.553905,1.691975,2.42,True,0.5685344,Untagged
+17:41:06.145,Untagged,-4.543811,1.80051,2.42,True,0.5821028,Untagged
+17:41:06.159,Untagged,-4.543795,1.80071,2.42,True,0.5964049,Untagged
+17:41:06.173,Untagged,-4.528575,1.799634,2.42,True,0.6104708,Untagged
+17:41:06.187,Untagged,-4.529041,1.798718,2.42,True,0.6240585,Untagged
+17:41:06.201,Untagged,-4.530131,1.797136,2.42,True,0.63846,Untagged
+17:41:06.215,Untagged,-4.544,1.641199,2.42,True,0.6523839,Untagged
+17:41:06.229,Untagged,-4.544821,1.641528,2.42,True,0.6654212,Untagged
+17:41:06.243,Untagged,-4.528459,1.634662,2.42,True,0.6797866,Untagged
+17:41:06.257,Untagged,-4.529095,1.634814,2.42,True,0.6937571,Untagged
+17:41:06.271,Untagged,-4.530235,1.634174,2.42,True,0.7079656,Untagged
+17:41:06.285,Untagged,-4.532702,1.624876,2.42,True,0.7220185,Untagged
+17:41:06.299,Untagged,-4.534018,1.623567,2.42,True,0.7361732,Untagged
+17:41:06.312,Untagged,-4.540931,1.631663,2.42,True,0.7499934,Untagged
+17:41:06.327,Untagged,-4.540541,1.629071,2.42,True,0.7638747,Untagged
+17:41:06.341,Untagged,-4.538743,1.644151,2.42,True,0.7783864,Untagged
+17:41:06.354,Untagged,-4.53972,1.642627,2.42,True,0.7917562,Untagged
+17:41:06.369,Untagged,-4.540959,1.640633,2.42,True,0.8049734,Untagged
+17:41:06.382,Untagged,-4.532024,1.63779,2.42,True,0.8195961,Untagged
+17:41:06.396,Untagged,-4.533519,1.636943,2.42,True,0.8339627,Untagged
+17:41:06.410,Untagged,-4.531888,1.632857,2.42,True,0.8470649,Untagged
+17:41:06.424,Untagged,-4.533387,1.632422,2.42,True,0.8612203,Untagged
+17:41:06.437,Untagged,-4.540401,1.618048,2.42,True,0.8749179,Untagged
+17:41:06.452,Untagged,-4.542371,1.616706,2.42,True,0.8887642,Untagged
+17:41:06.466,Untagged,-4.544154,1.616017,2.42,True,0.9028345,Untagged
+17:41:06.480,Untagged,-4.569082,1.617033,2.42,True,0.9173094,Untagged
+17:41:06.493,Untagged,-4.570118,1.61773,2.42,True,0.9309263,Untagged
+17:41:06.508,Untagged,-4.572071,1.622262,2.42,True,0.9448294,Untagged
+17:41:06.523,Untagged,-4.572482,1.623042,2.42,True,0.9589772,Untagged
+17:41:06.535,Untagged,-4.573328,1.62256,2.42,True,0.9738103,Untagged
+17:41:06.549,Untagged,-4.571332,1.630962,2.42,True,0.9867742,Untagged
+17:41:06.564,Untagged,-4.571992,1.629322,2.42,True,1.001137,Untagged
+17:41:06.578,Untagged,-4.57104,1.629036,2.42,True,1.014987,Untagged
+17:41:06.591,Untagged,-4.570723,1.629687,2.42,True,1.030052,Untagged
+17:41:06.605,Untagged,-4.54242,1.620013,2.42,True,1.042892,Untagged
+17:41:06.619,Untagged,-4.541789,1.62101,2.42,True,1.056601,Untagged
+17:41:06.632,Untagged,-4.5412,1.621321,2.42,True,1.070697,Untagged
+17:41:06.648,Untagged,-4.540943,1.618083,2.42,True,1.084622,Untagged
+17:41:06.660,Untagged,-4.539862,1.617717,2.42,True,1.098078,Untagged
+17:41:06.674,Untagged,-4.558213,1.620083,2.42,True,1.11233,Untagged
+17:41:06.689,Untagged,-4.556464,1.620332,2.42,True,1.12568,Untagged
+17:41:06.704,Untagged,-4.563586,1.622022,2.42,True,1.140125,Untagged
+17:41:06.717,Untagged,-4.560762,1.622425,2.42,True,1.153951,Untagged
+17:41:06.730,Untagged,-4.557874,1.622266,2.42,True,1.168014,Untagged
+17:41:06.745,Untagged,-4.568413,1.627605,2.42,True,1.182051,Untagged
+17:41:06.758,Untagged,-4.565365,1.626991,2.42,True,1.195565,Untagged
+17:41:06.772,Untagged,-4.546795,1.625873,2.42,True,1.209878,Untagged
+17:41:06.787,Untagged,-4.542744,1.626161,2.42,True,1.223338,Untagged
+17:41:06.801,Untagged,-4.538113,1.626567,2.42,True,1.238314,Untagged
+17:41:06.815,Untagged,-4.527865,1.628933,2.42,True,1.252099,Untagged
+17:41:06.829,Untagged,-4.524034,1.62904,2.42,True,1.265507,Untagged
+17:41:06.844,Untagged,-4.506406,1.621595,2.42,True,1.279997,Untagged
+17:41:06.857,Untagged,-4.503099,1.621503,2.42,True,1.293677,Untagged
+17:41:06.871,Untagged,-4.497577,1.618602,2.42,True,1.307543,Untagged
+17:41:06.885,Untagged,-4.494329,1.619427,2.42,True,1.321746,Untagged
+17:41:06.899,Untagged,-4.491877,1.619778,2.42,True,1.335699,Untagged
+17:41:06.913,Untagged,-4.474092,1.618604,2.42,True,1.3495,Untagged
+17:41:06.927,Untagged,-4.472851,1.618341,2.42,True,1.363098,Untagged
+17:41:06.941,Untagged,-4.468109,1.65917,2.42,True,1.377709,Untagged
+17:41:06.953,Untagged,-4.467794,1.659277,2.42,True,1.391608,Untagged
+17:41:06.969,Untagged,-4.46766,1.660127,2.42,True,1.405156,Untagged
+17:41:06.983,Untagged,-4.47907,1.66172,2.42,True,1.420188,Untagged
+17:41:06.997,Untagged,-4.479447,1.662264,2.42,True,1.433553,Untagged
+17:41:07.011,Untagged,-4.508973,1.644542,2.42,True,1.44716,Untagged
+17:41:07.024,Untagged,-4.50971,1.644894,2.42,True,1.461538,Untagged
+17:41:07.039,Untagged,-4.510215,1.644809,2.42,True,1.475117,Untagged
+17:41:07.051,Untagged,-4.519618,1.645147,2.42,True,1.489192,Untagged
+17:41:07.067,Untagged,-4.520342,1.645373,2.42,True,1.502725,Untagged
+17:41:07.081,Untagged,-4.520689,1.650441,2.42,True,1.517056,Untagged
+17:41:07.093,Untagged,-4.522184,1.65095,2.42,True,1.530998,Untagged
+17:41:07.108,Untagged,-4.520628,1.650919,2.42,True,1.544578,Untagged
+17:41:07.122,Untagged,-4.522477,1.650461,2.42,True,1.559352,Untagged
+17:41:07.136,Untagged,-4.524017,1.649723,2.42,True,1.572967,Untagged
+17:41:07.150,Untagged,-4.51964,1.653356,2.42,True,1.586519,Untagged
+17:41:07.163,Untagged,-4.520689,1.653466,2.42,True,1.6009,Untagged
+17:41:07.177,Untagged,-4.524964,1.628752,2.42,True,1.614814,Untagged
+17:41:07.191,Untagged,-4.527005,1.629453,2.42,True,1.628856,Untagged
+17:41:07.206,Untagged,-4.528975,1.630099,2.42,True,1.642172,Untagged
+17:41:07.220,Untagged,-4.531064,1.630487,2.42,True,1.656622,Untagged
+17:41:07.233,Untagged,-4.532295,1.630796,2.42,True,1.670882,Untagged
+17:41:07.248,Untagged,-4.522804,1.630808,2.42,True,1.684231,Untagged
+17:41:07.261,Untagged,-4.524269,1.631382,2.42,True,1.698322,Untagged
+17:41:07.275,Untagged,-4.52325,1.649583,2.42,True,1.712594,Untagged
+17:41:07.289,Untagged,-4.523909,1.650859,2.42,True,1.725892,Untagged
+17:41:07.303,Untagged,-4.523957,1.652166,2.42,True,1.740067,Untagged
+17:41:07.317,Untagged,-4.537018,1.654583,2.42,True,1.754723,Untagged
+17:41:07.331,Untagged,-4.536568,1.655752,2.42,True,1.768622,Untagged
+17:41:07.345,Untagged,-4.538041,1.635134,2.42,True,1.781735,Untagged
+17:41:07.359,Untagged,-4.537961,1.637315,2.42,True,1.796382,Untagged
+17:41:07.373,Untagged,-4.537922,1.63884,2.42,True,1.810089,Untagged
+17:41:07.387,Untagged,-4.539024,1.639567,2.42,True,1.823493,Untagged
+17:41:07.401,Untagged,-4.538803,1.640292,2.42,True,1.838074,Untagged
+17:41:07.414,Untagged,-4.500965,1.645782,2.42,True,1.851976,Untagged
+17:41:07.428,Untagged,-4.501256,1.646788,2.42,True,1.865563,Untagged
+17:41:07.443,Untagged,-4.532685,1.649614,2.42,True,1.879872,Untagged
+17:41:07.457,Untagged,-4.533422,1.650175,2.42,True,1.893611,Untagged
+17:41:07.471,Untagged,-4.533709,1.650412,2.42,True,1.907492,Untagged
+17:41:07.485,Untagged,-4.535063,1.640452,2.42,True,1.921749,Untagged
+17:41:07.499,Untagged,-4.535555,1.640306,2.42,True,1.935614,Untagged
+17:41:07.513,Untagged,-4.54554,1.641362,2.42,True,1.94957,Untagged
+17:41:07.526,Untagged,-4.545954,1.64161,2.42,True,1.963288,Untagged
+17:41:07.541,Untagged,-4.546342,1.641523,2.42,True,1.97749,Untagged
+17:41:07.554,Untagged,-4.550316,1.642112,2.42,True,1.991587,Untagged
+17:41:07.569,Untagged,-4.550467,1.641566,2.42,True,2.005153,Untagged
+17:41:07.583,Untagged,-4.558351,1.645742,2.42,True,2.019502,Untagged
+17:41:07.596,Untagged,-4.558994,1.645721,2.42,True,2.032893,Untagged
+17:41:07.611,Untagged,-4.559559,1.645274,2.42,True,2.047076,Untagged
+17:41:07.624,Untagged,-4.566168,1.64608,2.42,True,2.061031,Untagged
+17:41:07.638,Untagged,-4.567423,1.646183,2.42,True,2.075089,Untagged
+17:41:07.651,Untagged,-4.570606,1.627563,2.42,True,2.089389,Untagged
+17:41:07.666,Untagged,-4.571561,1.626954,2.42,True,2.102978,Untagged
+17:41:07.680,Untagged,-4.540735,1.623464,2.42,True,2.117074,Untagged
+17:41:07.693,Untagged,-4.54189,1.622458,2.42,True,2.130928,Untagged
+17:41:07.708,Untagged,-4.542615,1.620271,2.42,True,2.144386,Untagged
+17:41:07.721,Untagged,-4.543192,1.622252,2.42,True,2.158798,Untagged
+17:41:07.736,Untagged,-4.543752,1.619684,2.42,True,2.172682,Untagged
+17:41:07.750,Untagged,-4.548778,1.616747,2.42,True,2.186625,Untagged
+17:41:07.763,Untagged,-4.547734,1.613969,2.42,True,2.200842,Untagged
+17:41:07.778,Untagged,-4.568637,1.612924,2.42,True,2.214432,Untagged
+17:41:07.791,Untagged,-4.567626,1.610068,2.42,True,2.228879,Untagged
+17:41:07.805,Untagged,-4.566839,1.606882,2.42,True,2.242092,Untagged
+17:41:07.819,Untagged,-4.579923,1.622255,2.42,True,2.256398,Untagged
+17:41:07.833,Untagged,-4.57954,1.617503,2.42,True,2.270088,Untagged
+17:41:07.847,Untagged,-4.579926,1.611635,2.42,True,2.28375,Untagged
+17:41:07.861,Untagged,-4.580234,1.604396,2.42,True,2.298213,Untagged
+17:41:07.874,Untagged,-4.556832,1.59496,2.42,True,2.311984,Untagged
+17:41:07.890,Untagged,-4.557611,1.585127,2.42,True,2.325454,Untagged
+17:41:07.902,Untagged,-4.559339,1.572772,2.42,True,2.339859,Untagged
+17:41:07.917,Untagged,-4.59382,1.523748,2.263,True,2.353473,Untagged
+17:41:07.931,Untagged,-4.598739,1.507357,2.263,True,2.367859,Untagged
+17:41:07.944,Untagged,-4.623685,1.489686,2.263,True,2.381586,Untagged
+17:41:07.959,Untagged,-4.630403,1.467756,2.263,True,2.3958,Untagged
+17:41:07.973,Untagged,-4.63838,1.445145,2.263,True,2.409598,Untagged
+17:41:07.987,Untagged,-4.62256,1.424149,2.263,True,2.423041,Untagged
+17:41:08.001,Untagged,-4.630587,1.404807,2.263,True,2.437398,Untagged
+17:41:08.014,Untagged,-4.664855,1.393999,2.263,True,2.45142,Untagged
+17:41:08.028,Untagged,-4.664141,1.377,2.291017,True,2.46483,Untagged
+17:41:08.043,Untagged,-4.675109,1.377,2.294157,True,2.479527,Untagged
+17:41:08.056,Untagged,-4.692718,1.355676,2.249,True,2.493277,Untagged
+17:41:08.070,Untagged,-4.653421,1.336648,2.42,True,2.506677,Untagged
+17:41:08.084,Untagged,-4.663632,1.2957,2.42,True,2.521584,Untagged
+17:41:08.099,Untagged,-4.66966,1.276842,2.42,True,2.535326,Untagged
+17:41:08.112,Untagged,-4.680081,1.278425,2.42,True,2.548991,Untagged
+17:41:08.127,Untagged,-4.683875,1.26148,2.42,True,2.562681,Untagged
+17:41:08.140,Untagged,-4.687304,1.242992,2.42,True,2.579058,Untagged
+17:41:08.154,Untagged,-4.691625,1.198755,2.42,True,2.590734,Untagged
+17:41:08.167,Untagged,-4.695118,1.178955,2.42,True,2.604189,Untagged
+17:41:08.181,Untagged,-4.685237,1.189945,2.42,True,2.619147,Untagged
+17:41:08.195,Untagged,-4.688985,1.172114,2.42,True,2.632542,Untagged
+17:41:08.210,Untagged,-4.693987,1.156529,2.42,True,2.646285,Untagged
+17:41:08.224,Untagged,-4.689676,1.148774,2.42,True,2.660705,Untagged
+17:41:08.237,Untagged,-4.695165,1.135456,2.42,True,2.674586,Untagged
+17:41:08.251,Untagged,-4.692419,1.139667,2.42,True,2.688525,Untagged
+17:41:08.265,Untagged,-4.697973,1.12974,2.42,True,2.702079,Untagged
+17:41:08.279,Untagged,-4.709025,1.125562,2.42,True,2.716026,Untagged
+17:41:08.293,Untagged,-4.713854,1.119892,2.42,True,2.731409,Untagged
+17:41:08.307,TaskSelf_ETC,-5.032591,1.248403,0.9820446,True,2.743666,Untagged | TaskSelf_ETC
+17:41:08.321,TaskSelf_ETC,-5.0338,1.247558,0.9804135,True,2.758323,Untagged | TaskSelf_ETC
+17:41:08.334,TaskSelf_ETC,-5.0352,1.245981,0.9773787,True,2.771956,Untagged | TaskSelf_ETC
+17:41:08.349,TaskSelf_ETC,-5.036178,1.24496,0.975415,True,2.785672,Untagged | TaskSelf_ETC
+17:41:08.363,TaskSelf_ETC,-5.036709,1.244468,0.9744803,True,2.799835,Untagged | TaskSelf_ETC
+17:41:08.376,TaskSelf_ETC,-5.036964,1.244353,0.974327,True,2.813822,Untagged | TaskSelf_ETC
+17:41:08.391,TaskSelf_ETC,-5.026351,1.24365,0.9734626,True,2.827507,Untagged | TaskSelf_ETC
+17:41:08.404,TaskSelf_ETC,-5.026548,1.243653,0.9734656,True,2.841745,Untagged | TaskSelf_ETC
+17:41:08.418,TaskSelf_ETC,-5.023635,1.239109,0.9674925,True,2.855455,Untagged | TaskSelf_ETC
+17:41:08.433,TaskSelf_ETC,-5.023854,1.239338,0.9677923,True,2.869564,Untagged | TaskSelf_ETC
+17:41:08.446,TaskSelf_ETC,-5.022407,1.236972,0.9646823,True,2.883211,Untagged | TaskSelf_ETC
+17:41:08.461,TaskSelf_ETC,-5.022347,1.237941,0.9659599,True,2.897393,Untagged | TaskSelf_ETC
+17:41:08.474,TaskSelf_ETC,-5.021863,1.238631,0.9671025,True,2.911254,Untagged | TaskSelf_ETC
+17:41:08.489,TaskSelf_ETC,-5.018001,1.239302,0.9724994,True,2.924958,Untagged | TaskSelf_ETC
+17:41:08.503,Untagged,-4.656448,1.079229,2.42,True,2.939365,Untagged | TaskSelf_ETC
+17:41:08.516,Untagged,-4.651965,1.088017,2.42,True,2.953525,Untagged | TaskSelf_ETC
+17:41:08.530,Untagged,-4.651423,1.094824,2.42,True,2.966733,Untagged | TaskSelf_ETC
+17:41:08.545,Untagged,-4.650589,1.102372,2.42,True,2.981022,Untagged | TaskSelf_ETC
+17:41:08.558,Untagged,-4.649729,1.110382,2.42,True,2.994987,Untagged | TaskSelf_ETC
+17:41:08.572,Untagged,-4.647986,1.117409,2.42,True,3.009062,Untagged | TaskSelf_ETC
+17:41:08.585,Untagged,-4.646515,1.12456,2.42,True,3.022225,Untagged | TaskSelf_ETC
+17:41:08.600,Untagged,-4.644807,1.131988,2.42,True,3.036604,Untagged | TaskSelf_ETC
+17:41:08.614,Untagged,-4.656447,1.135069,2.42,True,3.051248,Untagged | TaskSelf_ETC
+17:41:08.627,Untagged,-4.654775,1.141426,2.42,True,3.064245,Untagged | TaskSelf_ETC
+17:41:08.641,Untagged,-4.653068,1.147009,2.42,True,3.078613,Untagged | TaskSelf_ETC
+17:41:08.655,Untagged,-4.662975,1.166612,2.42,True,3.092462,Untagged | TaskSelf_ETC
+17:41:08.669,Untagged,-4.660919,1.173469,2.42,True,3.105872,Untagged | TaskSelf_ETC
+17:41:08.683,Untagged,-4.647146,1.173304,2.42,True,3.120635,Untagged | TaskSelf_ETC
+17:41:08.696,Untagged,-4.644403,1.182057,2.42,True,3.133901,Untagged | TaskSelf_ETC
+17:41:08.711,Untagged,-4.641692,1.19009,2.42,True,3.147925,Untagged | TaskSelf_ETC
+17:41:08.726,Untagged,-4.651278,1.202699,2.42,True,3.162118,Untagged | TaskSelf_ETC
+17:41:08.739,Untagged,-4.648234,1.209799,2.42,True,3.175988,Untagged | TaskSelf_ETC
+17:41:08.753,Untagged,-4.653296,1.212087,2.42,True,3.189847,Untagged | TaskSelf_ETC
+17:41:08.767,Untagged,-4.64974,1.221535,2.42,True,3.203559,Untagged | TaskSelf_ETC
+17:41:08.780,Untagged,-4.666491,1.227272,2.42,True,3.217753,Untagged | TaskSelf_ETC
+17:41:08.794,Untagged,-4.663201,1.234478,2.42,True,3.231793,Untagged | TaskSelf_ETC
+17:41:08.809,Untagged,-4.660813,1.243094,2.42,True,3.245409,Untagged | TaskSelf_ETC
+17:41:08.823,Untagged,-4.638747,1.253476,2.42,True,3.259681,Untagged | TaskSelf_ETC
+17:41:08.836,Untagged,-4.635633,1.264015,2.42,True,3.273467,Untagged | TaskSelf_ETC
+17:41:08.851,Untagged,-4.650705,1.279557,2.42,True,3.287724,Untagged | TaskSelf_ETC
+17:41:08.864,Untagged,-4.647735,1.287155,2.42,True,3.302098,Untagged | TaskSelf_ETC
+17:41:08.879,Untagged,-4.622561,1.301853,2.42,True,3.315056,Untagged | TaskSelf_ETC
+17:41:08.893,Untagged,-4.61941,1.311421,2.42,True,3.329039,Untagged | TaskSelf_ETC
+17:41:08.907,Untagged,-4.615894,1.322555,2.42,True,3.342779,Untagged | TaskSelf_ETC
+17:41:08.921,Untagged,-4.604813,1.330334,2.42,True,3.357368,Untagged | TaskSelf_ETC
+17:41:08.934,Untagged,-4.600969,1.338776,2.42,True,3.371293,Untagged | TaskSelf_ETC
+17:41:08.949,Untagged,-4.57059,1.333624,2.42,True,3.384707,Untagged | TaskSelf_ETC
+17:41:08.962,Untagged,-4.566909,1.344482,2.42,True,3.399249,Untagged | TaskSelf_ETC
+17:41:08.976,Untagged,-4.615153,1.35012,2.249,True,3.413226,Untagged | TaskSelf_ETC
+17:41:08.990,Untagged,-4.583044,1.335152,2.42,True,3.426565,Untagged | TaskSelf_ETC
+17:41:09.004,Untagged,-4.578663,1.343536,2.42,True,3.440872,Untagged | TaskSelf_ETC
+17:41:09.018,Untagged,-4.572694,1.377,2.346925,True,3.455096,Untagged | TaskSelf_ETC
+17:41:09.032,Untagged,-4.595098,1.382708,2.263,True,3.469249,Untagged | TaskSelf_ETC
+17:41:09.046,Untagged,-4.590808,1.392176,2.263,True,3.482002,Untagged | TaskSelf_ETC
+17:41:09.060,Untagged,-4.519586,1.37985,2.42,True,3.496534,Untagged | TaskSelf_ETC
+17:41:09.073,Untagged,-4.567394,1.380541,2.263,True,3.510526,Untagged | TaskSelf_ETC
+17:41:09.088,Untagged,-4.510317,1.392382,2.42,True,3.523989,Untagged | TaskSelf_ETC
+17:41:09.101,Untagged,-4.506438,1.401455,2.42,True,3.538656,Untagged | TaskSelf_ETC
+17:41:09.114,Untagged,-4.571962,1.40139,2.263,True,3.552466,Untagged | TaskSelf_ETC
+17:41:09.130,Untagged,-4.56816,1.408799,2.263,True,3.565979,Untagged | TaskSelf_ETC
+17:41:09.143,Untagged,-4.564711,1.414811,2.263,True,3.58026,Untagged | TaskSelf_ETC
+17:41:09.156,Untagged,-4.506649,1.44943,2.42,True,3.594156,Untagged | TaskSelf_ETC
+17:41:09.171,Untagged,-4.502632,1.457595,2.42,True,3.607374,Untagged | TaskSelf_ETC
+17:41:09.186,Untagged,-4.49347,1.467263,2.42,True,3.621733,Untagged | TaskSelf_ETC
+17:41:09.199,Untagged,-4.490008,1.474096,2.42,True,3.636014,Untagged | TaskSelf_ETC
+17:41:09.213,Untagged,-4.486083,1.481205,2.42,True,3.649687,Untagged | TaskSelf_ETC
+17:41:09.227,Untagged,-4.478748,1.500242,2.42,True,3.663526,Untagged | TaskSelf_ETC
+17:41:09.240,Untagged,-4.475089,1.508053,2.42,True,3.677624,Untagged | TaskSelf_ETC
+17:41:09.254,Untagged,-4.47185,1.514489,2.42,True,3.691845,Untagged | TaskSelf_ETC
+17:41:09.269,Untagged,-4.469425,1.519358,2.42,True,3.705053,Untagged | TaskSelf_ETC
+17:41:09.283,Untagged,-4.45725,1.505879,2.42,True,3.719715,Untagged | TaskSelf_ETC
+17:41:09.297,Untagged,-4.455254,1.511999,2.42,True,3.73324,Untagged | TaskSelf_ETC
+17:41:09.311,Untagged,-4.453221,1.517286,2.42,True,3.746954,Untagged | TaskSelf_ETC
+17:41:09.324,Untagged,-4.451565,1.521649,2.42,True,3.761723,Untagged | TaskSelf_ETC
+17:41:09.338,Untagged,-4.450082,1.523722,2.42,True,3.775216,Untagged | TaskSelf_ETC
+17:41:09.351,Untagged,-4.465463,1.536843,2.42,True,3.78978,Untagged | TaskSelf_ETC
+17:41:09.366,Untagged,-4.464291,1.539366,2.42,True,3.803337,Untagged | TaskSelf_ETC
+17:41:09.381,Untagged,-4.474906,1.54344,2.42,True,3.816932,Untagged | TaskSelf_ETC
+17:41:09.394,Untagged,-4.47406,1.547176,2.42,True,3.83099,Untagged | TaskSelf_ETC
+17:41:09.407,Untagged,-4.473057,1.549786,2.42,True,3.844239,Untagged | TaskSelf_ETC
+17:41:09.423,Untagged,-4.473201,1.535403,2.42,True,3.858473,Untagged | TaskSelf_ETC
+17:41:09.435,Untagged,-4.472886,1.537805,2.42,True,3.872583,Untagged | TaskSelf_ETC
+17:41:09.450,Untagged,-4.472111,1.541442,2.42,True,3.886883,Untagged | TaskSelf_ETC
+17:41:09.464,Untagged,-4.47189,1.54305,2.42,True,3.900399,Untagged | TaskSelf_ETC
+17:41:09.477,Untagged,-4.471496,1.545811,2.42,True,3.914335,Untagged | TaskSelf_ETC
+17:41:09.491,Untagged,-4.471209,1.547528,2.42,True,3.928287,Untagged | TaskSelf_ETC
+17:41:09.505,Untagged,-4.470685,1.549078,2.42,True,3.941824,Untagged | TaskSelf_ETC
+17:41:09.519,Untagged,-4.486086,1.553941,2.42,True,3.956146,Untagged | TaskSelf_ETC
+17:41:09.533,Untagged,-4.484818,1.555249,2.42,True,3.970128,Untagged | TaskSelf_ETC
+17:41:09.547,Untagged,-4.484109,1.557095,2.42,True,3.983807,Untagged | TaskSelf_ETC
+17:41:09.561,Untagged,-4.504722,1.585009,2.42,True,3.998026,Untagged | TaskSelf_ETC
+17:41:09.574,Untagged,-4.504932,1.585825,2.42,True,4.012038,Untagged | TaskSelf_ETC
+17:41:09.589,Untagged,-4.505035,1.586227,2.42,True,4.025399,Untagged | TaskSelf_ETC
+17:41:09.603,Untagged,-4.50439,1.586258,2.42,True,4.039613,Untagged | TaskSelf_ETC
+17:41:09.617,Untagged,-4.502827,1.58689,2.42,True,4.054013,Untagged | TaskSelf_ETC
+17:41:09.631,Untagged,-4.502295,1.587001,2.42,True,4.068342,Untagged | TaskSelf_ETC
+17:41:09.644,Untagged,-4.502399,1.587376,2.42,True,4.082386,Untagged | TaskSelf_ETC
+17:41:09.659,Untagged,-4.484874,1.568545,2.42,True,4.095356,Untagged | TaskSelf_ETC
+17:41:09.673,Untagged,-4.485008,1.568749,2.42,True,4.110358,Untagged | TaskSelf_ETC
+17:41:09.687,Untagged,-4.503716,1.562527,2.42,True,4.122897,Untagged | TaskSelf_ETC
+17:41:09.701,Untagged,-4.503249,1.56205,2.42,True,4.137566,Untagged | TaskSelf_ETC
+17:41:09.714,Untagged,-4.503401,1.561993,2.42,True,4.151143,Untagged | TaskSelf_ETC
+17:41:09.729,Untagged,-4.481604,1.560779,2.42,True,4.164866,Untagged | TaskSelf_ETC
+17:41:09.743,Untagged,-4.505625,1.561739,2.42,True,4.179978,Untagged | TaskSelf_ETC
+17:41:09.756,Untagged,-4.505392,1.560475,2.42,True,4.193069,Untagged | TaskSelf_ETC
+17:41:09.771,Untagged,-4.50526,1.559801,2.42,True,4.206641,Untagged | TaskSelf_ETC
+17:41:09.784,Untagged,-4.504316,1.557214,2.42,True,4.221265,Untagged | TaskSelf_ETC
+17:41:09.797,Untagged,-4.504254,1.556393,2.42,True,4.234806,Untagged | TaskSelf_ETC
+17:41:09.811,Untagged,-4.504286,1.55566,2.42,True,4.248456,Untagged | TaskSelf_ETC
+17:41:09.826,Untagged,-4.504998,1.555326,2.42,True,4.26252,Untagged | TaskSelf_ETC
+17:41:09.839,Untagged,-4.505253,1.554242,2.42,True,4.276484,Untagged | TaskSelf_ETC
+17:41:09.853,Untagged,-4.503064,1.572488,2.42,True,4.290618,Untagged | TaskSelf_ETC
+17:41:09.867,Untagged,-4.502915,1.571066,2.42,True,4.304019,Untagged | TaskSelf_ETC
+17:41:09.882,Untagged,-4.507473,1.575342,2.42,True,4.318672,Untagged | TaskSelf_ETC
+17:41:09.896,Untagged,-4.507296,1.574542,2.42,True,4.332139,Untagged | TaskSelf_ETC
+17:41:09.910,Untagged,-4.509516,1.569,2.42,True,4.345806,Untagged | TaskSelf_ETC
+17:41:09.924,Untagged,-4.509274,1.568186,2.42,True,4.360507,Untagged | TaskSelf_ETC
+17:41:09.937,Untagged,-4.509568,1.567741,2.42,True,4.374125,Untagged | TaskSelf_ETC
+17:41:09.951,Untagged,-4.510455,1.57235,2.42,True,4.387794,Untagged | TaskSelf_ETC
+17:41:09.965,Untagged,-4.510959,1.57251,2.42,True,4.402465,Untagged | TaskSelf_ETC
+17:41:09.979,Untagged,-4.51114,1.566709,2.42,True,4.415644,Untagged | TaskSelf_ETC
+17:41:09.992,Untagged,-4.511245,1.567083,2.42,True,4.429695,Untagged | TaskSelf_ETC
+17:41:10.007,Untagged,-4.511248,1.566952,2.42,True,4.443552,Untagged | TaskSelf_ETC
+17:41:10.021,Untagged,-4.502406,1.568404,2.42,True,4.45752,Untagged | TaskSelf_ETC
+17:41:10.034,Untagged,-4.502532,1.567507,2.42,True,4.47152,Untagged | TaskSelf_ETC
+17:41:10.049,Untagged,-4.50264,1.564522,2.42,True,4.485396,Untagged | TaskSelf_ETC
+17:41:10.062,Untagged,-4.502498,1.564596,2.42,True,4.499669,Untagged | TaskSelf_ETC
+17:41:10.076,Untagged,-4.491482,1.558254,2.42,True,4.513466,Untagged | TaskSelf_ETC
+17:41:10.090,Untagged,-4.491496,1.558287,2.42,True,4.526835,Untagged | TaskSelf_ETC
+17:41:10.104,Untagged,-4.518713,1.554109,2.42,True,4.541567,Untagged | TaskSelf_ETC
+17:41:10.118,Untagged,-4.518932,1.553186,2.42,True,4.55522,Untagged | TaskSelf_ETC
+17:41:10.133,Untagged,-4.519017,1.551726,2.42,True,4.568993,Untagged | TaskSelf_ETC
+17:41:10.147,Untagged,-4.518462,1.551632,2.42,True,4.582632,Untagged | TaskSelf_ETC
+17:41:10.160,Untagged,-4.490133,1.550565,2.42,True,4.597525,Untagged | TaskSelf_ETC
+17:41:10.174,Untagged,-4.578467,1.522435,2.263,True,4.611132,Untagged | TaskSelf_ETC
+17:41:10.187,Untagged,-4.578876,1.521882,2.263,True,4.624566,Untagged | TaskSelf_ETC
+17:41:10.201,Untagged,-4.490892,1.55607,2.42,True,4.639081,Untagged | TaskSelf_ETC
+17:41:10.216,Untagged,-4.490302,1.553011,2.42,True,4.652537,Untagged | TaskSelf_ETC
+17:41:10.230,Untagged,-4.489507,1.549845,2.42,True,4.666716,Untagged | TaskSelf_ETC
+17:41:10.244,Untagged,-4.491339,1.546548,2.42,True,4.680633,Untagged | TaskSelf_ETC
+17:41:10.258,Untagged,-4.491957,1.542414,2.42,True,4.695027,Untagged | TaskSelf_ETC
+17:41:10.271,Untagged,-4.490705,1.536099,2.42,True,4.708895,Untagged | TaskSelf_ETC
+17:41:10.285,Untagged,-4.491123,1.528749,2.42,True,4.722039,Untagged | TaskSelf_ETC
+17:41:10.299,Untagged,-4.490983,1.520413,2.42,True,4.736804,Untagged | TaskSelf_ETC
+17:41:10.314,Untagged,-4.491006,1.508411,2.42,True,4.750215,Untagged | TaskSelf_ETC
+17:41:10.327,Untagged,-4.490921,1.498751,2.42,True,4.764055,Untagged | TaskSelf_ETC
+17:41:10.341,Untagged,-4.49022,1.492382,2.42,True,4.778129,Untagged | TaskSelf_ETC
+17:41:10.354,Untagged,-4.49241,1.486076,2.42,True,4.792129,Untagged | TaskSelf_ETC
+17:41:10.368,Untagged,-4.485659,1.477713,2.42,True,4.805733,Untagged | TaskSelf_ETC
+17:41:10.383,Untagged,-4.491148,1.469807,2.42,True,4.819712,Untagged | TaskSelf_ETC
+17:41:10.397,Untagged,-4.49611,1.462268,2.42,True,4.833728,Untagged | TaskSelf_ETC
+17:41:10.411,Untagged,-4.500374,1.452157,2.42,True,4.848307,Untagged | TaskSelf_ETC
+17:41:10.424,Untagged,-4.500195,1.45023,2.42,True,4.862777,Untagged | TaskSelf_ETC
+17:41:10.439,Untagged,-4.496492,1.450788,2.42,True,4.876251,Untagged | TaskSelf_ETC
+17:41:10.453,Untagged,-4.487473,1.450562,2.42,True,4.889529,Untagged | TaskSelf_ETC
+17:41:10.467,Untagged,-4.480582,1.448905,2.42,True,4.903514,Untagged | TaskSelf_ETC
+17:41:10.481,Untagged,-4.475755,1.46897,2.42,True,4.917354,Untagged | TaskSelf_ETC
+17:41:10.494,Untagged,-4.474872,1.468862,2.42,True,4.931883,Untagged | TaskSelf_ETC
+17:41:10.509,Untagged,-4.481306,1.475203,2.42,True,4.945487,Untagged | TaskSelf_ETC
+17:41:10.522,Untagged,-4.480314,1.474597,2.42,True,4.960062,Untagged | TaskSelf_ETC
+17:41:10.535,Untagged,-4.477395,1.475133,2.42,True,4.973974,Untagged | TaskSelf_ETC
+17:41:10.550,Untagged,-4.452193,1.467926,2.42,True,4.987954,Untagged | TaskSelf_ETC
+17:41:10.564,Untagged,-4.450139,1.468531,2.42,True,5.001464,Untagged | TaskSelf_ETC
+17:41:10.577,Untagged,-4.452802,1.469834,2.42,True,5.015113,Untagged | TaskSelf_ETC
+17:41:10.592,Untagged,-4.449785,1.471204,2.42,True,5.02915,Untagged | TaskSelf_ETC
+17:41:10.606,Untagged,-4.446059,1.472589,2.42,True,5.042665,Untagged | TaskSelf_ETC
+17:41:10.620,Untagged,-4.435029,1.472542,2.42,True,5.056677,Untagged | TaskSelf_ETC
+17:41:10.634,Untagged,-4.430776,1.472621,2.42,True,5.071599,Untagged | TaskSelf_ETC
+17:41:10.647,Untagged,-4.434559,1.472514,2.42,True,5.084695,Untagged | TaskSelf_ETC
+17:41:10.661,Untagged,-4.431227,1.472726,2.42,True,5.100377,Untagged | TaskSelf_ETC
+17:41:10.675,Untagged,-4.421649,1.476754,2.42,True,5.113277,Untagged | TaskSelf_ETC
+17:41:10.690,Untagged,-4.418396,1.478017,2.42,True,5.126923,Untagged | TaskSelf_ETC
+17:41:10.703,Untagged,-4.415274,1.478796,2.42,True,5.141165,Untagged | TaskSelf_ETC
+17:41:10.717,Untagged,-4.386048,1.481317,2.42,True,5.154923,Untagged | TaskSelf_ETC
+17:41:10.731,Untagged,-4.382934,1.480696,2.42,True,5.168644,Untagged | TaskSelf_ETC
+17:41:10.745,Untagged,-4.379432,1.486928,2.42,True,5.181985,Untagged | TaskSelf_ETC
+17:41:10.759,Untagged,-4.377046,1.48641,2.42,True,5.196258,Untagged | TaskSelf_ETC
+17:41:10.772,Untagged,-4.401686,1.478835,2.42,True,5.211351,Untagged | TaskSelf_ETC
+17:41:10.787,Untagged,-4.39983,1.47872,2.42,True,5.223986,Untagged | TaskSelf_ETC
+17:41:10.800,Untagged,-4.397923,1.477669,2.42,True,5.238916,Untagged | TaskSelf_ETC
+17:41:10.815,Untagged,-4.396391,1.477816,2.42,True,5.253302,Untagged | TaskSelf_ETC
+17:41:10.829,Untagged,-4.395182,1.477369,2.42,True,5.265653,Untagged | TaskSelf_ETC
+17:41:10.842,Untagged,-4.394695,1.472768,2.42,True,5.281018,Untagged | TaskSelf_ETC
+17:41:10.857,Untagged,-4.394305,1.472875,2.42,True,5.296133,Untagged | TaskSelf_ETC
+17:41:10.870,Untagged,-4.394528,1.472581,2.42,True,5.307305,Untagged | TaskSelf_ETC
+17:41:10.883,Untagged,-4.400183,1.476671,2.42,True,5.320614,Untagged | TaskSelf_ETC
+17:41:10.899,Untagged,-4.400609,1.475789,2.42,True,5.335988,Untagged | TaskSelf_ETC
+17:41:10.912,Untagged,-4.401065,1.470229,2.42,True,5.349159,Untagged | TaskSelf_ETC
+17:41:10.926,Untagged,-4.401652,1.469411,2.42,True,5.362494,Untagged | TaskSelf_ETC
+17:41:10.941,Untagged,-4.402876,1.469258,2.42,True,5.376775,Untagged | TaskSelf_ETC
+17:41:10.954,Untagged,-4.389444,1.492783,2.42,True,5.390867,Untagged | TaskSelf_ETC
+17:41:10.967,Untagged,-4.392318,1.493384,2.42,True,5.404381,Untagged | TaskSelf_ETC
+17:41:10.982,Untagged,-4.395941,1.48738,2.42,True,5.419023,Untagged | TaskSelf_ETC
+17:41:10.996,Untagged,-4.399139,1.488055,2.42,True,5.433046,Untagged | TaskSelf_ETC
+17:41:11.010,Untagged,-4.402042,1.487854,2.42,True,5.446479,Untagged | TaskSelf_ETC
+17:41:11.024,Untagged,-4.40576,1.488264,2.42,True,5.460373,Untagged | TaskSelf_ETC
+17:41:11.037,Untagged,-4.409496,1.489762,2.42,True,5.475458,Untagged | TaskSelf_ETC
+17:41:11.051,Untagged,-4.429311,1.480878,2.42,True,5.493678,Untagged | TaskSelf_ETC
+17:41:11.066,Untagged,-4.433973,1.483403,2.42,True,5.503035,Untagged | TaskSelf_ETC
+17:41:11.079,Untagged,-4.430572,1.480233,2.42,True,5.517371,Untagged | TaskSelf_ETC
+17:41:11.093,Untagged,-4.435628,1.483123,2.42,True,5.531645,Untagged | TaskSelf_ETC
+17:41:11.107,Untagged,-4.441615,1.488991,2.42,True,5.544244,Untagged | TaskSelf_ETC
+17:41:11.121,Untagged,-4.448793,1.495137,2.42,True,5.558553,Untagged | TaskSelf_ETC
+17:41:11.134,Untagged,-4.45587,1.499676,2.42,True,5.572496,Untagged | TaskSelf_ETC
+17:41:11.149,Untagged,-4.462344,1.503109,2.42,True,5.586636,Untagged | TaskSelf_ETC
+17:41:11.162,Untagged,-4.471473,1.507006,2.42,True,5.600406,Untagged | TaskSelf_ETC
+17:41:11.177,Untagged,-4.482765,1.523042,2.42,True,5.61445,Untagged | TaskSelf_ETC
+17:41:11.190,Untagged,-4.496396,1.529262,2.42,True,5.628625,Untagged | TaskSelf_ETC
+17:41:11.205,Untagged,-4.564754,1.515573,2.263,True,5.64175,Untagged | TaskSelf_ETC
+17:41:11.219,Untagged,-4.597188,1.521469,2.263,True,5.656547,Untagged | TaskSelf_ETC
+17:41:11.232,Untagged,-4.612755,1.524754,2.263,True,5.67167,Untagged | TaskSelf_ETC
+17:41:11.247,Untagged,-4.635272,1.520787,2.263,True,5.683975,Untagged | TaskSelf_ETC
+17:41:11.261,Untagged,-4.615903,1.547677,2.42,True,5.697087,Untagged | TaskSelf_ETC
+17:41:11.274,Untagged,-4.636162,1.553496,2.42,True,5.710836,Untagged | TaskSelf_ETC
+17:41:11.288,Untagged,-4.677513,1.562169,2.42,True,5.7245,Untagged | TaskSelf_ETC
+17:41:11.301,Untagged,-4.719247,1.569014,2.42,True,5.739224,Untagged | TaskSelf_ETC
+17:41:11.315,Untagged,-4.750563,1.543834,2.42,True,5.752852,Untagged | TaskSelf_ETC
+17:41:11.330,Untagged,-4.806512,1.550558,2.42,True,5.767024,Untagged | TaskSelf_ETC
+17:41:11.344,Untagged,-4.861004,1.572704,2.42,True,5.78037,Untagged | TaskSelf_ETC
+17:41:11.357,Untagged,-4.9162,1.578788,2.42,True,5.794601,Untagged | TaskSelf_ETC
+17:41:11.371,Untagged,-4.976168,1.584514,2.42,True,5.808778,Untagged | TaskSelf_ETC
+17:41:11.386,Untagged,-5.097905,1.571051,2.42,True,5.822373,Untagged | TaskSelf_ETC
+17:41:11.399,Untagged,-5.158158,1.575722,2.42,True,5.83695,Untagged | TaskSelf_ETC
+17:41:11.412,Untagged,-5.216634,1.601194,2.42,True,5.851301,Untagged | TaskSelf_ETC
+17:41:11.428,Untagged,-5.273959,1.602247,2.42,True,5.863804,Untagged | TaskSelf_ETC
+17:41:11.441,Untagged,-5.332208,1.600679,2.42,True,5.878614,Untagged | TaskSelf_ETC
+17:41:11.455,Untagged,-5.382441,1.600183,2.42,True,5.89191,Untagged | TaskSelf_ETC
+17:41:11.470,Untagged,-5.430099,1.601083,2.42,True,5.905988,Untagged | TaskSelf_ETC
+17:41:11.483,Untagged,-5.460002,1.607031,2.42,True,5.92088,Untagged | TaskSelf_ETC
+17:41:11.497,Untagged,-5.501959,1.612897,2.42,True,5.934144,Untagged | TaskSelf_ETC
+17:41:11.511,Untagged,-5.557682,1.618052,2.42,True,5.947438,Untagged | TaskSelf_ETC
+17:41:11.524,Untagged,-5.591537,1.622717,2.42,True,5.961515,Untagged | TaskSelf_ETC
+17:41:11.539,Untagged,-5.617736,1.627622,2.42,True,5.975477,Untagged | TaskSelf_ETC
+17:41:11.553,Untagged,-5.668557,1.642853,2.42,True,5.989665,Untagged | TaskSelf_ETC
+17:41:11.567,Untagged,-5.685316,1.647299,2.42,True,6.004124,Untagged | TaskSelf_ETC
+17:41:11.581,Untagged,-5.713466,1.650375,2.42,True,6.017958,Untagged | TaskSelf_ETC
+17:41:11.594,Untagged,-5.721981,1.64823,2.42,True,6.031796,Untagged | TaskSelf_ETC
+17:41:11.608,Untagged,-5.725996,1.64659,2.42,True,6.045175,Untagged | TaskSelf_ETC
+17:41:11.623,Untagged,-5.723416,1.645056,2.42,True,6.060061,Untagged | TaskSelf_ETC
+17:41:11.636,Untagged,-5.718173,1.64482,2.42,True,6.073671,Untagged | TaskSelf_ETC
+17:41:11.649,Untagged,-5.731043,1.66356,2.42,True,6.087274,Untagged | TaskSelf_ETC
+17:41:11.664,Untagged,-5.719199,1.660926,2.42,True,6.100747,Untagged | TaskSelf_ETC
+17:41:11.678,Untagged,-5.707612,1.657001,2.42,True,6.114653,Untagged | TaskSelf_ETC
+17:41:11.692,Untagged,-5.686952,1.652751,2.42,True,6.129066,Untagged | TaskSelf_ETC
+17:41:11.706,Untagged,-5.663444,1.652447,2.42,True,6.142441,Untagged | TaskSelf_ETC
+17:41:11.720,Untagged,-5.640419,1.662415,2.42,True,6.156486,Untagged | TaskSelf_ETC
+17:41:11.733,Untagged,-5.617458,1.660976,2.42,True,6.170471,Untagged | TaskSelf_ETC
+17:41:11.747,Untagged,-5.605826,1.660263,2.42,True,6.184739,Untagged | TaskSelf_ETC
+17:41:11.762,Untagged,-5.579033,1.657431,2.42,True,6.198447,Untagged | TaskSelf_ETC
+17:41:11.774,Untagged,-5.54786,1.653394,2.42,True,6.212376,Untagged | TaskSelf_ETC
+17:41:11.790,Untagged,-5.522157,1.651222,2.42,True,6.226039,Untagged | TaskSelf_ETC
+17:41:11.804,Untagged,-5.484438,1.645495,2.42,True,6.240385,Untagged | TaskSelf_ETC
+17:41:11.817,Untagged,-5.452207,1.624772,2.42,True,6.254062,Untagged | TaskSelf_ETC
+17:41:11.831,Untagged,-5.410064,1.619516,2.42,True,6.26861,Untagged | TaskSelf_ETC
+17:41:11.846,Untagged,-5.363298,1.630787,2.42,True,6.282441,Untagged | TaskSelf_ETC
+17:41:11.858,Untagged,-5.3208,1.627267,2.42,True,6.296107,Untagged | TaskSelf_ETC
+17:41:11.873,Untagged,-5.277243,1.623638,2.42,True,6.310426,Untagged | TaskSelf_ETC
+17:41:11.887,Untagged,-5.228336,1.631937,2.42,True,6.323581,Untagged | TaskSelf_ETC
+17:41:11.901,Untagged,-5.184314,1.627068,2.42,True,6.337957,Untagged | TaskSelf_ETC
+17:41:11.913,Untagged,-5.139627,1.638036,2.42,True,6.351835,Untagged | TaskSelf_ETC
+17:41:11.929,Untagged,-5.094748,1.636292,2.42,True,6.365278,Untagged | TaskSelf_ETC
+17:41:11.943,Untagged,-5.050733,1.635435,2.42,True,6.379857,Untagged | TaskSelf_ETC
+17:41:11.956,Untagged,-5.000458,1.61945,2.42,True,6.393488,Untagged | TaskSelf_ETC
+17:41:11.971,Untagged,-4.957374,1.618938,2.42,True,6.407248,Untagged | TaskSelf_ETC
+17:41:11.984,Untagged,-4.906193,1.617791,2.42,True,6.421892,Untagged | TaskSelf_ETC
+17:41:11.998,Untagged,-4.861856,1.618846,2.42,True,6.435481,Untagged | TaskSelf_ETC
+17:41:12.011,Untagged,-4.823626,1.567922,2.42,True,6.448903,Untagged | TaskSelf_ETC
+17:41:12.025,Untagged,-4.780925,1.568758,2.42,True,6.462792,Untagged | TaskSelf_ETC
+17:41:12.041,Untagged,-4.739323,1.56978,2.42,True,6.476984,Untagged | TaskSelf_ETC
+17:41:12.053,Untagged,-4.697118,1.570368,2.42,True,6.490809,Untagged | TaskSelf_ETC
+17:41:12.067,Untagged,-4.655923,1.572586,2.42,True,6.504609,Untagged | TaskSelf_ETC
+17:41:12.081,Untagged,-4.579715,1.613517,2.42,True,6.519019,Untagged | TaskSelf_ETC
+17:41:12.094,Untagged,-4.540922,1.617177,2.42,True,6.532403,Untagged | TaskSelf_ETC
+17:41:12.109,Untagged,-4.501835,1.625423,2.42,True,6.546329,Untagged | TaskSelf_ETC
+17:41:12.124,Untagged,-4.464025,1.629691,2.42,True,6.560772,Untagged | TaskSelf_ETC
+17:41:12.137,Untagged,-4.426711,1.635535,2.42,True,6.574394,Untagged | TaskSelf_ETC
+17:41:12.151,Untagged,-4.369377,1.640286,2.42,True,6.588627,Untagged | TaskSelf_ETC
+17:41:12.166,Untagged,-4.337184,1.647071,2.42,True,6.602128,Untagged | TaskSelf_ETC
+17:41:12.179,Untagged,-4.300028,1.658157,2.42,True,6.616149,Untagged | TaskSelf_ETC
+17:41:12.192,Untagged,-4.265792,1.665198,2.42,True,6.630195,Untagged | TaskSelf_ETC
+17:41:12.207,Untagged,-4.251999,1.666246,2.385512,True,6.643659,Untagged | TaskSelf_ETC
+17:41:12.221,Untagged,-4.251999,1.656935,2.324868,True,6.657972,Untagged | TaskSelf_ETC
+17:41:12.235,Untagged,-4.251999,1.6518,2.273103,True,6.671824,Untagged | TaskSelf_ETC
+17:41:12.249,Untagged,-4.242532,1.660541,2.256,True,6.685759,Untagged | TaskSelf_ETC
+17:41:12.262,Untagged,-4.220284,1.663737,2.256,True,6.699698,Untagged | TaskSelf_ETC
+17:41:12.276,Untagged,-4.20124,1.662935,2.256,True,6.71379,Untagged | TaskSelf_ETC
+17:41:12.291,Untagged,-4.178887,1.667379,2.256,True,6.72736,Untagged | TaskSelf_ETC
+17:41:12.305,Untagged,-4.159527,1.671991,2.256,True,6.741293,Untagged | TaskSelf_ETC
+17:41:12.319,Untagged,-4.146919,1.674863,2.256,True,6.755154,Untagged | TaskSelf_ETC
+17:41:12.331,Untagged,-4.131861,1.678442,2.256,True,6.769479,Untagged | TaskSelf_ETC
+17:41:12.346,Untagged,-4.116826,1.668015,2.256,True,6.783021,Untagged | TaskSelf_ETC
+17:41:12.361,Untagged,-3.995393,1.702596,2.42,True,6.798512,Untagged | TaskSelf_ETC
+17:41:12.374,Untagged,-3.981755,1.701042,2.42,True,6.812034,Untagged | TaskSelf_ETC
+17:41:12.387,Untagged,-3.936488,1.695992,2.42,True,6.82554,Untagged | TaskSelf_ETC
+17:41:12.402,Untagged,-3.923616,1.696105,2.42,True,6.840134,Untagged | TaskSelf_ETC
+17:41:12.415,Untagged,-3.887166,1.658135,2.42,True,6.85381,Untagged | TaskSelf_ETC
+17:41:12.430,Untagged,-3.875473,1.660538,2.42,True,6.867758,Untagged | TaskSelf_ETC
+17:41:12.444,Untagged,-3.866308,1.665333,2.42,True,6.881333,Untagged | TaskSelf_ETC
+17:41:12.457,Untagged,-3.858971,1.66925,2.42,True,6.895545,Untagged | TaskSelf_ETC
+17:41:12.471,Untagged,-3.850151,1.675308,2.42,True,6.909413,Untagged | TaskSelf_ETC
+17:41:12.485,Untagged,-3.841187,1.686203,2.42,True,6.92271,Untagged | TaskSelf_ETC
+17:41:12.499,Untagged,-3.834138,1.692109,2.42,True,6.93762,Untagged | TaskSelf_ETC
+17:41:12.512,Untagged,-3.867615,1.705472,2.42,True,6.950211,Untagged | TaskSelf_ETC
+17:41:12.527,Untagged,-3.862296,1.71174,2.42,True,6.96384,Untagged | TaskSelf_ETC
+17:41:12.541,Untagged,-3.854636,1.719043,2.42,True,6.978172,Untagged | TaskSelf_ETC
+17:41:12.554,Untagged,-3.846292,1.733007,2.42,True,6.992305,Untagged | TaskSelf_ETC
+17:41:12.569,Untagged,-3.837837,1.737419,2.42,True,7.00542,Untagged | TaskSelf_ETC
+17:41:12.583,Untagged,-3.805351,1.743026,2.42,True,7.020941,Untagged | TaskSelf_ETC
+17:41:12.598,Untagged,-3.795987,1.750347,2.42,True,7.034962,Untagged | TaskSelf_ETC
+17:41:12.611,Untagged,-3.773574,1.759369,2.42,True,7.048562,Untagged | TaskSelf_ETC
+17:41:12.624,Untagged,-3.758783,1.767716,2.42,True,7.062453,Untagged | TaskSelf_ETC
+17:41:12.639,Untagged,-3.741838,1.774654,2.42,True,7.076633,Untagged | TaskSelf_ETC
+17:41:12.653,Untagged,-3.71571,1.774566,2.42,True,7.08999,Untagged | TaskSelf_ETC
+17:41:12.666,Untagged,-3.701896,1.780583,2.42,True,7.103408,Untagged | TaskSelf_ETC
+17:41:12.681,Untagged,-3.700898,1.794653,2.42,True,7.11757,Untagged | TaskSelf_ETC
+17:41:12.694,Untagged,-3.686157,1.801684,2.42,True,7.132827,Untagged | TaskSelf_ETC
+17:41:12.708,Untagged,-3.681833,1.802565,2.42,True,7.144919,Untagged | TaskSelf_ETC
+17:41:12.722,Untagged,-3.664878,1.809005,2.42,True,7.159304,Untagged | TaskSelf_ETC
+17:41:12.736,Untagged,-3.645178,1.813784,2.42,True,7.173323,Untagged | TaskSelf_ETC
+17:41:12.751,Untagged,-3.629102,1.814373,2.42,True,7.186822,Untagged | TaskSelf_ETC
+17:41:12.764,Untagged,-3.611997,1.819213,2.42,True,7.200975,Untagged | TaskSelf_ETC
+17:41:12.777,Untagged,-3.55157,1.830239,2.42,True,7.215243,Untagged | TaskSelf_ETC
+17:41:12.791,Untagged,-3.537938,1.83989,2.42,True,7.228801,Untagged | TaskSelf_ETC
+17:41:12.805,Untagged,-3.524455,1.850636,2.42,True,7.242407,Untagged | TaskSelf_ETC
+17:41:12.820,Untagged,-3.507312,1.873592,2.42,True,7.256612,Untagged | TaskSelf_ETC
+17:41:12.834,Untagged,-3.49582,1.88424,2.42,True,7.270655,Untagged | TaskSelf_ETC
+17:41:12.847,Untagged,-3.453979,1.897835,2.42,True,7.284243,Untagged | TaskSelf_ETC
+17:41:12.861,Untagged,-3.448746,1.9066,2.42,True,7.298444,Untagged | TaskSelf_ETC
+17:41:12.874,Untagged,-3.444313,1.916004,2.42,True,7.312286,Untagged | TaskSelf_ETC
+17:41:12.889,Untagged,-3.472702,1.948602,2.42,True,7.325742,Untagged | TaskSelf_ETC
+17:41:12.904,Untagged,-3.476707,1.955857,2.42,True,7.340003,Untagged | TaskSelf_ETC
+17:41:12.917,Untagged,-3.461483,1.964332,2.42,True,7.354499,Untagged | TaskSelf_ETC
+17:41:12.931,Untagged,-3.471869,1.968919,2.42,True,7.368217,Untagged | TaskSelf_ETC
+17:41:12.946,Untagged,-3.482848,1.973114,2.42,True,7.381633,Untagged | TaskSelf_ETC
+17:41:12.959,Untagged,-3.50107,1.979479,2.42,True,7.395805,Untagged | TaskSelf_ETC
+17:41:12.973,Untagged,-3.516365,1.978889,2.42,True,7.41009,Untagged | TaskSelf_ETC
+17:41:12.987,Untagged,-3.522922,1.940723,2.42,True,7.423752,Untagged | TaskSelf_ETC
+17:41:13.001,Untagged,-3.525311,1.950385,2.42,True,7.437829,Untagged | TaskSelf_ETC
+17:41:13.014,Untagged,-3.472157,2.004196,2.42,True,7.4526,Untagged | TaskSelf_ETC
+17:41:13.029,Untagged,-3.473571,2.013473,2.42,True,7.46606,Untagged | TaskSelf_ETC
+17:41:13.042,Untagged,-3.480743,2.022865,2.42,True,7.479651,Untagged | TaskSelf_ETC
+17:41:13.056,Untagged,-3.499334,1.986973,2.42,True,7.493891,Untagged | TaskSelf_ETC
+17:41:13.070,Untagged,-3.513403,1.992164,2.42,True,7.507878,Untagged | TaskSelf_ETC
+17:41:13.084,Untagged,-3.547332,1.992368,2.42,True,7.521698,Untagged | TaskSelf_ETC
+17:41:13.097,Untagged,-3.555165,1.993895,2.42,True,7.535583,Untagged | TaskSelf_ETC
+17:41:13.112,Untagged,-3.563004,1.993818,2.42,True,7.549139,Untagged | TaskSelf_ETC
+17:41:13.126,Untagged,-3.589979,1.992585,2.42,True,7.562834,Untagged | TaskSelf_ETC
+17:41:13.140,Untagged,-3.600116,1.996552,2.42,True,7.577155,Untagged | TaskSelf_ETC
+17:41:13.153,Untagged,-3.607485,2.034805,2.42,True,7.590699,Untagged | TaskSelf_ETC
+17:41:13.168,Untagged,-3.616922,2.04274,2.42,True,7.604408,Untagged | TaskSelf_ETC
+17:41:13.182,Untagged,-3.628424,2.070659,2.42,True,7.618819,Untagged | TaskSelf_ETC
+17:41:13.195,Untagged,-3.643002,2.070874,2.42,True,7.63243,Untagged | TaskSelf_ETC
+17:41:13.210,Untagged,-3.660299,2.066184,2.42,True,7.646204,Untagged | TaskSelf_ETC
+17:41:13.223,Untagged,-3.670603,2.039845,2.42,True,7.660518,Untagged | TaskSelf_ETC
+17:41:13.238,Untagged,-3.683223,2.036062,2.42,True,7.674473,Untagged | TaskSelf_ETC
+17:41:13.251,Untagged,-3.691618,2.021356,2.42,True,7.688485,Untagged | TaskSelf_ETC
+17:41:13.265,Untagged,-3.702945,2.020905,2.42,True,7.701964,Untagged | TaskSelf_ETC
+17:41:13.279,Untagged,-3.720186,2.021093,2.42,True,7.716104,Untagged | TaskSelf_ETC
+17:41:13.293,Untagged,-3.735318,2.023326,2.42,True,7.730089,Untagged | TaskSelf_ETC
+17:41:13.307,Untagged,-3.750149,2.024762,2.42,True,7.744762,Untagged | TaskSelf_ETC
+17:41:13.321,Untagged,-3.76705,2.030998,2.42,True,7.758008,Untagged | TaskSelf_ETC
+17:41:13.334,Untagged,-3.779703,2.030706,2.42,True,7.772221,Untagged | TaskSelf_ETC
+17:41:13.349,Untagged,-3.792151,2.042625,2.42,True,7.785445,Untagged | TaskSelf_ETC
+17:41:13.363,Untagged,-3.809222,2.040462,2.42,True,7.800764,Untagged | TaskSelf_ETC
+17:41:13.376,Untagged,-3.826051,2.038508,2.42,True,7.814867,Untagged | TaskSelf_ETC
+17:41:13.391,Untagged,-3.842602,2.037288,2.42,True,7.827399,Untagged | TaskSelf_ETC
+17:41:13.404,Untagged,-3.853936,2.03849,2.42,True,7.840854,Untagged | TaskSelf_ETC
+17:41:13.418,Untagged,-3.85538,2.040314,2.42,True,7.855309,Untagged | TaskSelf_ETC
+17:41:13.432,Untagged,-3.867873,2.040132,2.42,True,7.868985,Untagged | TaskSelf_ETC
+17:41:13.446,Untagged,-3.895864,2.031578,2.42,True,7.883008,Untagged | TaskSelf_ETC
+17:41:13.460,Untagged,-3.910979,2.032134,2.42,True,7.897314,Untagged | TaskSelf_ETC
+17:41:13.474,Untagged,-3.924447,2.03276,2.42,True,7.911345,Untagged | TaskSelf_ETC
+17:41:13.489,Untagged,-3.959329,2.037336,2.42,True,7.925041,Untagged | TaskSelf_ETC
+17:41:13.502,Untagged,-3.970407,2.038996,2.42,True,7.939735,Untagged | TaskSelf_ETC
+17:41:13.516,Untagged,-3.985755,2.046543,2.42,True,7.953799,Untagged | TaskSelf_ETC
+17:41:13.529,Untagged,-4.000706,2.0489,2.42,True,7.967417,Untagged | TaskSelf_ETC
+17:41:13.544,Untagged,-4.015609,2.051302,2.42,True,7.981371,Untagged | TaskSelf_ETC
+17:41:13.558,Untagged,-4.025167,2.055143,2.42,True,7.994434,Untagged | TaskSelf_ETC
+17:41:13.571,Untagged,-4.035476,2.059566,2.42,True,8.008558,Untagged | TaskSelf_ETC
+17:41:13.585,Untagged,-4.044995,2.05222,2.42,True,0.0144937,Untagged | TaskSelf_ETC
+17:41:13.599,Untagged,-4.054627,2.056227,2.42,True,0.0278662,Untagged | TaskSelf_ETC
+17:41:13.613,Untagged,-4.066064,2.061253,2.42,True,0.041715,Untagged | TaskSelf_ETC
+17:41:13.627,Untagged,-4.122209,2.046458,2.42,True,0.0563223,Untagged | TaskSelf_ETC
+17:41:13.641,Untagged,-4.13408,2.050054,2.42,True,0.0704771,Untagged | TaskSelf_ETC
+17:41:13.654,Untagged,-4.167911,2.048488,2.42,True,0.0845832,Untagged | TaskSelf_ETC
+17:41:13.670,Untagged,-4.179129,2.052043,2.42,True,0.098089,Untagged | TaskSelf_ETC
+17:41:13.683,Untagged,-4.193505,2.064682,2.42,True,0.1125117,Untagged | TaskSelf_ETC
+17:41:13.697,Untagged,-4.206577,2.06643,2.42,True,0.126255,Untagged | TaskSelf_ETC
+17:41:13.711,Untagged,-4.219587,2.070266,2.42,True,0.1399386,Untagged | TaskSelf_ETC
+17:41:13.724,Untagged,-4.192439,2.086843,2.42,True,0.1536905,Untagged | TaskSelf_ETC
+17:41:13.738,Untagged,-4.205153,2.09103,2.42,True,0.1681875,Untagged | TaskSelf_ETC
+17:41:13.753,Untagged,-4.22007,2.115738,2.42,True,0.1823354,Untagged | TaskSelf_ETC
+17:41:13.767,Untagged,-4.235512,2.118607,2.42,True,0.1953527,Untagged | TaskSelf_ETC
+17:41:13.781,Untagged,-4.254205,2.120295,2.42,True,0.2102652,Untagged | TaskSelf_ETC
+17:41:13.794,Untagged,-4.270713,2.122079,2.42,True,0.2229094,Untagged | TaskSelf_ETC
+17:41:13.808,Untagged,-4.285998,2.12429,2.42,True,0.2362994,Untagged | TaskSelf_ETC
+17:41:13.823,Untagged,-4.319574,2.12593,2.42,True,0.2506108,Untagged | TaskSelf_ETC
+17:41:13.836,Untagged,-4.336917,2.128194,2.42,True,0.264541,Untagged | TaskSelf_ETC
+17:41:13.850,Untagged,-4.353471,2.128187,2.42,True,0.2781691,Untagged | TaskSelf_ETC
+17:41:13.864,Untagged,-4.370137,2.129178,2.42,True,0.2927258,Untagged | TaskSelf_ETC
+17:41:13.877,Untagged,-4.341932,2.139909,2.42,True,0.3063258,Untagged | TaskSelf_ETC
+17:41:13.892,Untagged,-4.359522,2.138361,2.42,True,0.320771,Untagged | TaskSelf_ETC
+17:41:13.906,Untagged,-4.378281,2.136891,2.42,True,0.3356858,Untagged | TaskSelf_ETC
+17:41:13.920,Untagged,-4.395871,2.133821,2.42,True,0.3489028,Untagged | TaskSelf_ETC
+17:41:13.933,Untagged,-4.414081,2.131202,2.42,True,0.3619707,Untagged | TaskSelf_ETC
+17:41:13.947,Untagged,-4.448958,2.107149,2.42,True,0.3754562,Untagged | TaskSelf_ETC
+17:41:13.961,Untagged,-4.465901,2.104234,2.42,True,0.3895252,Untagged | TaskSelf_ETC
+17:41:13.974,Untagged,-4.483379,2.101656,2.42,True,0.403588,Untagged | TaskSelf_ETC
+17:41:13.989,Untagged,-4.500562,2.09774,2.42,True,0.4186153,Untagged | TaskSelf_ETC
+17:41:14.003,Untagged,-4.518356,2.093306,2.42,True,0.4332941,Untagged | TaskSelf_ETC
+17:41:14.017,Untagged,-4.532939,2.077939,2.42,True,0.445806,Untagged | TaskSelf_ETC
+17:41:14.031,Untagged,-4.548739,2.072479,2.42,True,0.46117,Untagged | TaskSelf_ETC
+17:41:14.044,Untagged,-4.563532,2.066839,2.42,True,0.4729879,Untagged | TaskSelf_ETC
+17:41:14.059,Untagged,-4.594079,2.055012,2.42,True,0.4871946,Untagged | TaskSelf_ETC
+17:41:14.073,Untagged,-4.606953,2.050679,2.42,True,0.5011948,Untagged | TaskSelf_ETC
+17:41:14.087,Untagged,-4.632305,2.042765,2.42,True,0.5149255,Untagged | TaskSelf_ETC
+17:41:14.101,Untagged,-4.645051,2.036654,2.42,True,0.529248,Untagged | TaskSelf_ETC
+17:41:14.114,Untagged,-4.667615,2.026162,2.42,True,0.5429713,Untagged | TaskSelf_ETC
+17:41:14.128,Untagged,-4.676892,2.018592,2.42,True,0.5569687,Untagged | TaskSelf_ETC
+17:41:14.143,Untagged,-4.687244,2.014903,2.42,True,0.5712574,Untagged | TaskSelf_ETC
+17:41:14.156,Untagged,-4.706656,2.017622,2.42,True,0.5853039,Untagged | TaskSelf_ETC
+17:41:14.171,Untagged,-4.716472,2.012897,2.42,True,0.5983467,Untagged | TaskSelf_ETC
+17:41:14.183,Untagged,-4.722468,1.992091,2.42,True,0.6124851,Untagged | TaskSelf_ETC
+17:41:14.199,Untagged,-4.733159,1.984881,2.42,True,0.6264429,Untagged | TaskSelf_ETC
+17:41:14.211,Untagged,-4.742593,1.976838,2.42,True,0.640283,Untagged | TaskSelf_ETC
+17:41:14.227,Untagged,-4.750617,1.964009,2.42,True,0.654289,Untagged | TaskSelf_ETC
+17:41:14.240,Untagged,-4.759793,1.956836,2.42,True,0.6681778,Untagged | TaskSelf_ETC
+17:41:14.254,Untagged,-4.773383,1.948792,2.42,True,0.683424,Untagged | TaskSelf_ETC
+17:41:14.267,Untagged,-4.783252,1.942512,2.42,True,0.695885,Untagged | TaskSelf_ETC
+17:41:14.282,Untagged,-4.806665,1.939564,2.42,True,0.7102368,Untagged | TaskSelf_ETC
+17:41:14.295,Untagged,-4.817148,1.93281,2.42,True,0.7241855,Untagged | TaskSelf_ETC
+17:41:14.310,Untagged,-4.82692,1.925496,2.42,True,0.7377438,Untagged | TaskSelf_ETC
+17:41:14.323,Untagged,-4.836841,1.919773,2.42,True,0.7518335,Untagged | TaskSelf_ETC
+17:41:14.337,Untagged,-4.846742,1.913284,2.42,True,0.7658945,Untagged | TaskSelf_ETC
+17:41:14.350,Untagged,-4.85627,1.906087,2.42,True,0.7797025,Untagged | TaskSelf_ETC
+17:41:14.365,Untagged,-4.866897,1.901951,2.42,True,0.7932411,Untagged | TaskSelf_ETC
+17:41:14.379,Untagged,-4.877473,1.896679,2.42,True,0.807837,Untagged | TaskSelf_ETC
+17:41:14.393,Untagged,-4.906554,1.884463,2.42,True,0.8214657,Untagged | TaskSelf_ETC
+17:41:14.407,Untagged,-4.916831,1.87734,2.42,True,0.8348529,Untagged | TaskSelf_ETC
+17:41:14.421,Untagged,-4.883486,1.898629,2.42,True,0.8492432,Untagged | TaskSelf_ETC
+17:41:14.434,Untagged,-4.893382,1.89152,2.42,True,0.8634087,Untagged | TaskSelf_ETC
+17:41:14.449,Untagged,-4.904402,1.883638,2.42,True,0.8771191,Untagged | TaskSelf_ETC
+17:41:14.463,Untagged,-4.934953,1.869708,2.42,True,0.8909976,Untagged | TaskSelf_ETC
+17:41:14.476,Untagged,-4.945575,1.862899,2.42,True,0.9052444,Untagged | TaskSelf_ETC
+17:41:14.491,Untagged,-4.933258,1.848491,2.42,True,0.918455,Untagged | TaskSelf_ETC
+17:41:14.504,Untagged,-4.943764,1.84316,2.42,True,0.9329875,Untagged | TaskSelf_ETC
+17:41:14.519,Untagged,-4.971322,1.833335,2.42,True,0.9475168,Untagged | TaskSelf_ETC
+17:41:14.532,Untagged,-4.982911,1.829481,2.42,True,0.961414,Untagged | TaskSelf_ETC
+17:41:14.546,Untagged,-4.995991,1.827668,2.42,True,0.9750621,Untagged | TaskSelf_ETC
+17:41:14.560,Untagged,-5.006984,1.82558,2.42,True,0.9891811,Untagged | TaskSelf_ETC
+17:41:14.574,Untagged,-5.020304,1.823506,2.42,True,1.00319,Untagged | TaskSelf_ETC
+17:41:14.589,Untagged,-5.030989,1.8142,2.42,True,1.016744,Untagged | TaskSelf_ETC
+17:41:14.602,Untagged,-5.04333,1.811891,2.42,True,1.030276,Untagged | TaskSelf_ETC
+17:41:14.616,Untagged,-5.055631,1.809753,2.42,True,1.044318,Untagged | TaskSelf_ETC
+17:41:14.630,Untagged,-5.067509,1.807026,2.42,True,1.057636,Untagged | TaskSelf_ETC
+17:41:14.644,Untagged,-5.079158,1.804255,2.42,True,1.072201,Untagged | TaskSelf_ETC
+17:41:14.658,Untagged,-5.085291,1.792985,2.42,True,1.086229,Untagged | TaskSelf_ETC
+17:41:14.671,Untagged,-5.095849,1.791856,2.42,True,1.101028,Untagged | TaskSelf_ETC
+17:41:14.686,Untagged,-5.113123,1.813418,2.42,True,1.114627,Untagged | TaskSelf_ETC
+17:41:14.700,Untagged,-5.123066,1.815622,2.42,True,1.128998,Untagged | TaskSelf_ETC
+17:41:14.712,Untagged,-5.131228,1.818119,2.42,True,1.142466,Untagged | TaskSelf_ETC
+17:41:14.727,Untagged,-5.144503,1.836006,2.42,True,1.15612,Untagged | TaskSelf_ETC
+17:41:14.741,Untagged,-5.15199,1.840305,2.42,True,1.170381,Untagged | TaskSelf_ETC
+17:41:14.755,Untagged,-5.158962,1.845268,2.42,True,1.184316,Untagged | TaskSelf_ETC
+17:41:14.768,Untagged,-5.165087,1.85068,2.42,True,1.197767,Untagged | TaskSelf_ETC
+17:41:14.783,Untagged,-5.13582,1.863447,2.42,True,1.212565,Untagged | TaskSelf_ETC
+17:41:14.797,Untagged,-5.140771,1.867786,2.42,True,1.226005,Untagged | TaskSelf_ETC
+17:41:14.811,Untagged,-5.144507,1.873582,2.42,True,1.240294,Untagged | TaskSelf_ETC
+17:41:14.824,Untagged,-5.131412,1.876043,2.42,True,1.2535,Untagged | TaskSelf_ETC
+17:41:14.839,Untagged,-5.135707,1.881532,2.42,True,1.267695,Untagged | TaskSelf_ETC
+17:41:14.851,Untagged,-5.137835,1.889891,2.42,True,1.281839,Untagged | TaskSelf_ETC
+17:41:14.867,Untagged,-5.14058,1.896098,2.42,True,1.295249,Untagged | TaskSelf_ETC
+17:41:14.881,Untagged,-5.141792,1.903291,2.42,True,1.309604,Untagged | TaskSelf_ETC
+17:41:14.894,Untagged,-5.14278,1.907759,2.42,True,1.322772,Untagged | TaskSelf_ETC
+17:41:14.908,Untagged,-5.143082,1.912124,2.42,True,1.336128,Untagged | TaskSelf_ETC
+17:41:14.922,Untagged,-5.147251,1.916697,2.42,True,1.351612,Untagged | TaskSelf_ETC
+17:41:14.936,Untagged,-5.144586,1.919298,2.42,True,1.365228,Untagged | TaskSelf_ETC
+17:41:14.950,Untagged,-5.141232,1.920811,2.42,True,1.379179,Untagged | TaskSelf_ETC
+17:41:14.966,Untagged,-5.127601,1.930357,2.42,True,1.397746,Untagged | TaskSelf_ETC
+17:41:14.980,Untagged,-5.135346,1.936291,2.42,True,1.408869,Untagged | TaskSelf_ETC
+17:41:14.993,Untagged,-5.130153,1.939718,2.42,True,1.422499,Untagged | TaskSelf_ETC
+17:41:15.006,Untagged,-5.125242,1.942901,2.42,True,1.435703,Untagged | TaskSelf_ETC
+17:41:15.021,Untagged,-5.152062,1.940347,2.42,True,1.449252,Untagged | TaskSelf_ETC
+17:41:15.034,Untagged,-5.148609,1.945293,2.42,True,1.464267,Untagged | TaskSelf_ETC
+17:41:15.047,Untagged,-5.145018,1.950254,2.42,True,1.477011,Untagged | TaskSelf_ETC
+17:41:15.062,Untagged,-5.133101,1.923146,2.42,True,1.491278,Untagged | TaskSelf_ETC
+17:41:15.076,Untagged,-5.128318,1.928168,2.42,True,1.504887,Untagged | TaskSelf_ETC
+17:41:15.089,Untagged,-5.146954,1.925889,2.42,True,1.51812,Untagged | TaskSelf_ETC
+17:41:15.103,Untagged,-5.141463,1.926518,2.42,True,1.53266,Untagged | TaskSelf_ETC
+17:41:15.118,Untagged,-5.134994,1.925804,2.42,True,1.546206,Untagged | TaskSelf_ETC
+17:41:15.131,Untagged,-5.088387,1.933229,2.42,True,1.560256,Untagged | TaskSelf_ETC
+17:41:15.144,Untagged,-5.077466,1.932548,2.42,True,1.573691,Untagged | TaskSelf_ETC
+17:41:15.159,Untagged,-5.086628,1.937944,2.42,True,1.58771,Untagged | TaskSelf_ETC
+17:41:15.172,Untagged,-5.076865,1.936887,2.42,True,1.601948,Untagged | TaskSelf_ETC
+17:41:15.187,Untagged,-5.053768,1.938097,2.42,True,1.615086,Untagged | TaskSelf_ETC
+17:41:15.201,Untagged,-5.041823,1.935077,2.42,True,1.629516,Untagged | TaskSelf_ETC
+17:41:15.214,Untagged,-5.030096,1.932623,2.42,True,1.643798,Untagged | TaskSelf_ETC
+17:41:15.228,Untagged,-5.028992,1.927163,2.42,True,1.656397,Untagged | TaskSelf_ETC
+17:41:15.241,Untagged,-5.017041,1.925336,2.42,True,1.671248,Untagged | TaskSelf_ETC
+17:41:15.256,Untagged,-4.989577,1.914426,2.42,True,1.685863,Untagged | TaskSelf_ETC
+17:41:15.270,Untagged,-4.977376,1.910991,2.42,True,1.699129,Untagged | TaskSelf_ETC
+17:41:15.284,Untagged,-4.968696,1.905637,2.42,True,1.712887,Untagged | TaskSelf_ETC
+17:41:15.298,Untagged,-4.955899,1.899298,2.42,True,1.727763,Untagged | TaskSelf_ETC
+17:41:15.311,Untagged,-4.942505,1.891748,2.42,True,1.740792,Untagged | TaskSelf_ETC
+17:41:15.326,Untagged,-4.903063,1.892692,2.42,True,1.754922,Untagged | TaskSelf_ETC
+17:41:15.340,Untagged,-4.890574,1.886192,2.42,True,1.768928,Untagged | TaskSelf_ETC
+17:41:15.353,Untagged,-4.909236,1.881819,2.42,True,1.783032,Untagged | TaskSelf_ETC
+17:41:15.367,Untagged,-4.900003,1.877629,2.42,True,1.795501,Untagged | TaskSelf_ETC
+17:41:15.381,Untagged,-4.891447,1.87288,2.42,True,1.809734,Untagged | TaskSelf_ETC
+17:41:15.394,Untagged,-4.87217,1.863288,2.42,True,1.823462,Untagged | TaskSelf_ETC
+17:41:15.408,Untagged,-4.866921,1.85852,2.42,True,1.837181,Untagged | TaskSelf_ETC
+17:41:15.423,Untagged,-4.875307,1.859124,2.42,True,1.851069,Untagged | TaskSelf_ETC
+17:41:15.437,Untagged,-4.87344,1.853647,2.42,True,1.865162,Untagged | TaskSelf_ETC
+17:41:15.451,Untagged,-4.877531,1.862595,2.42,True,1.879751,Untagged | TaskSelf_ETC
+17:41:15.464,Untagged,-4.876478,1.857036,2.42,True,1.894037,Untagged | TaskSelf_ETC
+17:41:15.478,Untagged,-4.879011,1.850176,2.42,True,1.908084,Untagged | TaskSelf_ETC
+17:41:15.492,Untagged,-4.876205,1.843327,2.42,True,1.921859,Untagged | TaskSelf_ETC
+17:41:15.507,Untagged,-4.855092,1.815936,2.42,True,1.935765,Untagged | TaskSelf_ETC
+17:41:15.521,Untagged,-4.852551,1.809182,2.42,True,1.949573,Untagged | TaskSelf_ETC
+17:41:15.534,Untagged,-4.851048,1.802562,2.42,True,1.963621,Untagged | TaskSelf_ETC
+17:41:15.549,Untagged,-4.847645,1.79487,2.42,True,1.977013,Untagged | TaskSelf_ETC
+17:41:15.562,Untagged,-4.843482,1.787663,2.42,True,1.991452,Untagged | TaskSelf_ETC
+17:41:15.575,Untagged,-4.838581,1.777944,2.42,True,2.004898,Untagged | TaskSelf_ETC
+17:41:15.591,Untagged,-4.833751,1.769028,2.42,True,2.019643,Untagged | TaskSelf_ETC
+17:41:15.604,Untagged,-4.823789,1.774318,2.42,True,2.033005,Untagged | TaskSelf_ETC
+17:41:15.617,Untagged,-4.819965,1.768011,2.42,True,2.047203,Untagged | TaskSelf_ETC
+17:41:15.631,Untagged,-4.815757,1.761362,2.42,True,2.061262,Untagged | TaskSelf_ETC
+17:41:15.646,Untagged,-4.798915,1.759049,2.42,True,2.074407,Untagged | TaskSelf_ETC
+17:41:15.660,Untagged,-4.792823,1.754213,2.42,True,2.088611,Untagged | TaskSelf_ETC
+17:41:15.673,Untagged,-4.786743,1.75172,2.42,True,2.102745,Untagged | TaskSelf_ETC
+17:41:15.688,Untagged,-4.75804,1.759109,2.42,True,2.116183,Untagged | TaskSelf_ETC
+17:41:15.701,Untagged,-4.753809,1.759001,2.42,True,2.130805,Untagged | TaskSelf_ETC
+17:41:15.715,Untagged,-4.779612,1.767524,2.42,True,2.144444,Untagged | TaskSelf_ETC
+17:41:15.730,Untagged,-4.774975,1.766042,2.42,True,2.158229,Untagged | TaskSelf_ETC
+17:41:15.743,Untagged,-4.775372,1.77761,2.42,True,2.172464,Untagged | TaskSelf_ETC
+17:41:15.757,Untagged,-4.770883,1.775841,2.42,True,2.186934,Untagged | TaskSelf_ETC
+17:41:15.771,Untagged,-4.768889,1.774886,2.42,True,2.200025,Untagged | TaskSelf_ETC
+17:41:15.785,Untagged,-4.771402,1.776148,2.42,True,2.213595,Untagged | TaskSelf_ETC
+17:41:15.798,Untagged,-4.772465,1.776658,2.42,True,2.227762,Untagged | TaskSelf_ETC
+17:41:15.812,Untagged,-4.761352,1.784891,2.42,True,2.241773,Untagged | TaskSelf_ETC
+17:41:15.827,Untagged,-4.761397,1.785867,2.42,True,2.255532,Untagged | TaskSelf_ETC
+17:41:15.841,Untagged,-4.766717,1.808975,2.42,True,2.26969,Untagged | TaskSelf_ETC
+17:41:15.854,Untagged,-4.766814,1.809471,2.42,True,2.283728,Untagged | TaskSelf_ETC
+17:41:15.869,Untagged,-4.765882,1.809731,2.42,True,2.297127,Untagged | TaskSelf_ETC
+17:41:15.883,Untagged,-4.764369,1.808855,2.42,True,2.311985,Untagged | TaskSelf_ETC
+17:41:15.896,Untagged,-4.764055,1.806842,2.42,True,2.324964,Untagged | TaskSelf_ETC
+17:41:15.910,Untagged,-4.770528,1.802333,2.42,True,2.338888,Untagged | TaskSelf_ETC
+17:41:15.924,Untagged,-4.768602,1.799745,2.42,True,2.352045,Untagged | TaskSelf_ETC
+17:41:15.937,Untagged,-4.766977,1.797188,2.42,True,2.366941,Untagged | TaskSelf_ETC
+17:41:15.951,Untagged,-4.764359,1.794465,2.42,True,2.380212,Untagged | TaskSelf_ETC
+17:41:15.966,Untagged,-4.759778,1.791207,2.42,True,2.394091,Untagged | TaskSelf_ETC
+17:41:15.980,Untagged,-4.782295,1.781346,2.42,True,2.408165,Untagged | TaskSelf_ETC
+17:41:15.993,Untagged,-4.777112,1.776985,2.42,True,2.421828,Untagged | TaskSelf_ETC
+17:41:16.007,Untagged,-4.773616,1.77879,2.42,True,2.436116,Untagged | TaskSelf_ETC
+17:41:16.021,Untagged,-4.768761,1.772734,2.42,True,2.451012,Untagged | TaskSelf_ETC
+17:41:16.034,Untagged,-4.76387,1.767107,2.42,True,2.464657,Untagged | TaskSelf_ETC
+17:41:16.050,Untagged,-4.759164,1.756384,2.42,True,2.478352,Untagged | TaskSelf_ETC
+17:41:16.063,Untagged,-4.753124,1.752829,2.42,True,2.49239,Untagged | TaskSelf_ETC
+17:41:16.077,Untagged,-4.750014,1.755769,2.42,True,2.505657,Untagged | TaskSelf_ETC
+17:41:16.091,Untagged,-4.74826,1.754344,2.42,True,2.520443,Untagged | TaskSelf_ETC
+17:41:16.104,Untagged,-4.753164,1.76039,2.42,True,2.533653,Untagged | TaskSelf_ETC
+17:41:16.119,Untagged,-4.754209,1.75733,2.42,True,2.547966,Untagged | TaskSelf_ETC
+17:41:16.132,Untagged,-4.756527,1.753819,2.42,True,2.561361,Untagged | TaskSelf_ETC
+17:41:16.147,Untagged,-4.758945,1.750866,2.42,True,2.576087,Untagged | TaskSelf_ETC
+17:41:16.161,Untagged,-4.761519,1.748765,2.42,True,2.589707,Untagged | TaskSelf_ETC
+17:41:16.174,Untagged,-4.72905,1.724163,2.42,True,2.603796,Untagged | TaskSelf_ETC
+17:41:16.189,Untagged,-4.730798,1.725207,2.42,True,2.617146,Untagged | TaskSelf_ETC
+17:41:16.203,Untagged,-4.730711,1.726577,2.42,True,2.6318,Untagged | TaskSelf_ETC
+17:41:16.216,Untagged,-4.728412,1.724962,2.42,True,2.645689,Untagged | TaskSelf_ETC
+17:41:16.230,Untagged,-4.727921,1.729546,2.42,True,2.65931,Untagged | TaskSelf_ETC
+17:41:16.245,Untagged,-4.723422,1.734118,2.42,True,2.673095,Untagged | TaskSelf_ETC
+17:41:16.259,Untagged,-4.719831,1.740292,2.42,True,2.687233,Untagged | TaskSelf_ETC
+17:41:16.272,Untagged,-4.702751,1.769161,2.42,True,2.701488,Untagged | TaskSelf_ETC
+17:41:16.286,Untagged,-4.696652,1.778268,2.42,True,2.714978,Untagged | TaskSelf_ETC
+17:41:16.301,Untagged,-4.690082,1.788182,2.42,True,2.728994,Untagged | TaskSelf_ETC
+17:41:16.313,Untagged,-4.687778,1.804417,2.42,True,2.743168,Untagged | TaskSelf_ETC
+17:41:16.328,Untagged,-4.684182,1.812832,2.42,True,2.756639,Untagged | TaskSelf_ETC
+17:41:16.341,Untagged,-4.708116,1.832921,2.42,True,2.771923,Untagged | TaskSelf_ETC
+17:41:16.355,Untagged,-4.705935,1.839935,2.42,True,2.784363,Untagged | TaskSelf_ETC
+17:41:16.369,Untagged,-4.705132,1.84621,2.42,True,2.798137,Untagged | TaskSelf_ETC
+17:41:16.384,Untagged,-4.701457,1.832564,2.42,True,2.813223,Untagged | TaskSelf_ETC
+17:41:16.398,Untagged,-4.70073,1.836043,2.42,True,2.826171,Untagged | TaskSelf_ETC
+17:41:16.411,Untagged,-4.700593,1.842181,2.42,True,2.840219,Untagged | TaskSelf_ETC
+17:41:16.426,Untagged,-4.70214,1.842891,2.42,True,2.853054,Untagged | TaskSelf_ETC
+17:41:16.440,Untagged,-4.70336,1.84294,2.42,True,2.867614,Untagged | TaskSelf_ETC
+17:41:16.452,Untagged,-4.707176,1.840008,2.42,True,2.881494,Untagged | TaskSelf_ETC
+17:41:16.467,Untagged,-4.709707,1.836754,2.42,True,2.895504,Untagged | TaskSelf_ETC
+17:41:16.481,Untagged,-4.721578,1.841355,2.42,True,2.909834,Untagged | TaskSelf_ETC
+17:41:16.494,Untagged,-4.725105,1.837642,2.42,True,2.923105,Untagged | TaskSelf_ETC
+17:41:16.509,Untagged,-4.727473,1.833742,2.42,True,2.936815,Untagged | TaskSelf_ETC
+17:41:16.523,Untagged,-4.739631,1.827462,2.42,True,2.951107,Untagged | TaskSelf_ETC
+17:41:16.537,Untagged,-4.740561,1.822707,2.42,True,2.96503,Untagged | TaskSelf_ETC
+17:41:16.550,Untagged,-4.734232,1.79239,2.42,True,2.978456,Untagged | TaskSelf_ETC
+17:41:16.564,Untagged,-4.735415,1.786536,2.42,True,2.992965,Untagged | TaskSelf_ETC
+17:41:16.579,Untagged,-4.736387,1.78169,2.42,True,3.006423,Untagged | TaskSelf_ETC
+17:41:16.592,Untagged,-4.738343,1.777413,2.42,True,3.020729,Untagged | TaskSelf_ETC
+17:41:16.606,Untagged,-4.739692,1.77333,2.42,True,3.034351,Untagged | TaskSelf_ETC
+17:41:16.620,Untagged,-4.739194,1.790629,2.42,True,3.048592,Untagged | TaskSelf_ETC
+17:41:16.633,Untagged,-4.740274,1.786735,2.42,True,3.06226,Untagged | TaskSelf_ETC
+17:41:16.648,Untagged,-4.74201,1.782243,2.42,True,3.075897,Untagged | TaskSelf_ETC
+17:41:16.663,Untagged,-4.744232,1.778284,2.42,True,3.090215,Untagged | TaskSelf_ETC
+17:41:16.676,Untagged,-4.741132,1.750971,2.42,True,3.104372,Untagged | TaskSelf_ETC
+17:41:16.691,Untagged,-4.745218,1.749276,2.42,True,3.12244,Untagged | TaskSelf_ETC
+17:41:16.704,Untagged,-4.749096,1.747644,2.42,True,3.13318,Untagged | TaskSelf_ETC
+17:41:16.717,Untagged,-4.774284,1.74028,2.42,True,3.147077,Untagged | TaskSelf_ETC
+17:41:16.731,Untagged,-4.777767,1.736943,2.42,True,3.160191,Untagged | TaskSelf_ETC
+17:41:16.746,Untagged,-4.784817,1.732978,2.42,True,3.173722,Untagged | TaskSelf_ETC
+17:41:16.760,Untagged,-4.788674,1.730361,2.42,True,3.188123,Untagged | TaskSelf_ETC
+17:41:16.774,Untagged,-4.792418,1.727953,2.42,True,3.202139,Untagged | TaskSelf_ETC
+17:41:16.832,Untagged,-4.798154,1.732792,2.42,True,3.266716,Untagged | TaskSelf_ETC
