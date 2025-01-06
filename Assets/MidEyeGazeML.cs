@@ -39,12 +39,12 @@ namespace Metaface.Utilities
         public string focusOBJ;
 
         private Coroutine flashCoroutine;
-        [SerializeField] private float flashDuration = 5f;  
-        [SerializeField] private float flashSpeed = 2f;     
+        [SerializeField] private float flashDuration = 5f;
+        [SerializeField] private float flashSpeed = 2f;
 
-        
-        private float autoFlashTimer = 0f;   
-        private float autoFlashInterval = 30f; 
+
+        private float autoFlashTimer = 0f;
+        private float autoFlashInterval = 30f;
 
         void Start()
         {
@@ -57,11 +57,11 @@ namespace Metaface.Utilities
                 renderer.material = new Material(Shader.Find("Standard"));
             }
 
-            
+
             var mat = gazeIndicator.GetComponent<Renderer>().material;
             SetMaterialToFadeMode(mat);
 
-            
+
             mat.color = new Color(1f, 1f, 0f, 0.3f);
 
             midEyeHelper = GetComponent<MidEyeGazeHelper>();
@@ -76,12 +76,12 @@ namespace Metaface.Utilities
             RaycastMidEye(leftEye, rightEye, out hitMid, midRay, maxGazeDistance);
             focusOBJ = midEyeHelper != null ? midEyeHelper.focusOBJ : "";
 
-            
+
             autoFlashTimer += Time.deltaTime;
             if (autoFlashTimer >= autoFlashInterval)
             {
-                autoFlashTimer = 0f;          
-                SetGazeState(true);           
+                autoFlashTimer = 0f;
+                SetGazeState(true);
             }
         }
 
@@ -148,7 +148,7 @@ namespace Metaface.Utilities
 
         public void SetGazeState(bool isGazeOn)
         {
-            
+
             if (flashCoroutine != null)
             {
                 StopCoroutine(flashCoroutine);
@@ -157,12 +157,12 @@ namespace Metaface.Utilities
 
             if (isGazeOn)
             {
-                
+
                 flashCoroutine = StartCoroutine(FlashBlueForSeconds(flashDuration));
             }
             else
             {
-                
+
                 var mat = gazeIndicator.GetComponent<Renderer>().material;
                 mat.color = new Color(1f, 1f, 0f, 0.3f);
             }
@@ -175,18 +175,18 @@ namespace Metaface.Utilities
 
             while (elapsed < duration)
             {
-                
+
                 float t = Mathf.PingPong(Time.time * flashSpeed, 1f);
                 float alpha = Mathf.Lerp(0.2f, 0.6f, t);
 
-                
+
                 mat.color = new Color(0f, 0f, 1f, alpha);
 
                 elapsed += Time.deltaTime;
                 yield return null;
             }
 
-            
+
             mat.color = new Color(1f, 1f, 0f, 0.3f);
             flashCoroutine = null;
         }
@@ -195,7 +195,7 @@ namespace Metaface.Utilities
         {
             if (mat == null) return;
 
-            mat.SetFloat("_Mode", 2); 
+            mat.SetFloat("_Mode", 2);
             mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
             mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
             mat.SetInt("_ZWrite", 0);
@@ -206,5 +206,9 @@ namespace Metaface.Utilities
         }
     }
 }
+
+
+
+
 
 
