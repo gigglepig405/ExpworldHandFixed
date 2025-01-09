@@ -850,6 +850,8 @@ MonoBehaviour:
   facialParameters: []
   self_facePlaybackSystem: {fileID: 8628150467288635282}
   facePlaybackSystem: {fileID: 8744916330722347996}
+  headAvtrPlaybackSystem: {fileID: 0}
+  headHandAvtrPlaybackSystem: {fileID: 0}
   startPlayback: 0
   leftProjector: {fileID: 1108526452172137564}
   rightProjector: {fileID: 7890105205989967734}
@@ -1138,6 +1140,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &578686449068466089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1223,7 @@ MonoBehaviour:
   ApplyRotation: 1
   ReferenceFrame: {fileID: 4647857186248448458}
   TrackingMode: 0
+  eyeballOffset: 0
 --- !u!1 &599084140011359505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1566,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &708927835270020149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,6 +2491,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &958911756192592028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,6 +3662,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1230008273607412189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,6 +4981,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1744926435252711514
 GameObject:
   m_ObjectHideFlags: 0
@@ -15709,6 +15717,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2506219365771828091
 GameObject:
   m_ObjectHideFlags: 0
@@ -18731,6 +18740,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3606967013785133016
 GameObject:
   m_ObjectHideFlags: 0
@@ -25633,6 +25643,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4496102431551264423
 GameObject:
   m_ObjectHideFlags: 0
@@ -27191,6 +27202,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4745188165789555932
 GameObject:
   m_ObjectHideFlags: 0
@@ -29353,6 +29365,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5463589510603551467
 GameObject:
   m_ObjectHideFlags: 0
@@ -29689,9 +29702,11 @@ MonoBehaviour:
   emotionHelper: {fileID: 6668993638444054068}
   emotionObjects:
   - type: 0
-    gameObject: {fileID: 5569949190601870492}
+    emojiGO: {fileID: 0}
+    effectGO: {fileID: 0}
   - type: 1
-    gameObject: {fileID: 3493040002264816948}
+    emojiGO: {fileID: 0}
+    effectGO: {fileID: 0}
 --- !u!1 &5538822160314061821
 GameObject:
   m_ObjectHideFlags: 0
@@ -30135,6 +30150,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5713575353998048834
 GameObject:
   m_ObjectHideFlags: 0
@@ -30778,6 +30794,7 @@ MonoBehaviour:
   ApplyRotation: 1
   ReferenceFrame: {fileID: 4647857186248448458}
   TrackingMode: 1
+  eyeballOffset: 0
 --- !u!1 &5913990508115514093
 GameObject:
   m_ObjectHideFlags: 0
@@ -32007,6 +32024,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6308965409273170860
 GameObject:
   m_ObjectHideFlags: 0
@@ -33502,6 +33520,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6468609842022875877
 GameObject:
   m_ObjectHideFlags: 0
@@ -36540,6 +36559,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6821570000742003245
 GameObject:
   m_ObjectHideFlags: 0
@@ -37514,6 +37534,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7229421851360302232
 GameObject:
   m_ObjectHideFlags: 0
@@ -40728,6 +40749,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8399963156841749951
 GameObject:
   m_ObjectHideFlags: 0
@@ -42545,6 +42567,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8601130008948627206
 GameObject:
   m_ObjectHideFlags: 0
@@ -44516,6 +44539,7 @@ MonoBehaviour:
   ApplyRotation: 1
   ReferenceFrame: {fileID: 4647857186248448458}
   TrackingMode: 1
+  eyeballOffset: 0
 --- !u!1 &8695819778895357352
 GameObject:
   m_ObjectHideFlags: 0
@@ -44852,6 +44876,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8717123658075542738
 GameObject:
   m_ObjectHideFlags: 0
@@ -45696,6 +45721,7 @@ MonoBehaviour:
   ApplyRotation: 1
   ReferenceFrame: {fileID: 4647857186248448458}
   TrackingMode: 0
+  eyeballOffset: 0
 --- !u!1 &9153482767772694492
 GameObject:
   m_ObjectHideFlags: 0

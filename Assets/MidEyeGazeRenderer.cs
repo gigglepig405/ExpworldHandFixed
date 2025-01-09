@@ -14,7 +14,7 @@ namespace Metaface.Utilities
         [SerializeField] private bool showRays = false;
         [SerializeField] private float maxGazeDistance = 1000f;
 
-        [SerializeField] private bool enableLogging = false; 
+        [SerializeField] private bool enableLogging = false;
 
         private LineRenderer midRay;
         private GameObject gazeIndicator;
@@ -311,6 +311,9 @@ namespace Metaface.Utilities
         }
     }
 }
+
+
+
 
 
 

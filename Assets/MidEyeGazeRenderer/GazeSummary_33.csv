@@ -1,0 +1,10 @@
+Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,BallColor,BallScale,TriggerCount,BallToggleCount
+2025-01-08 18:10:52,0.67,True,False,(-5.42, 0.82, -0.28),Yellow,(0.05, 0.05, 0.05),0,0
+2025-01-08 18:10:53,1.69,True,False,(-5.03, 0.87, -0.27),Yellow,(0.05, 0.05, 0.05),0,0
+2025-01-08 18:10:54,2.70,True,False,(-2.83, 0.80, 0.35),Yellow,(0.05, 0.05, 0.05),0,0
+2025-01-08 18:10:55,3.72,True,False,(-2.83, 2.30, 2.20),Yellow,(0.05, 0.05, 0.05),0,0
+2025-01-08 18:10:56,4.73,True,False,(-2.83, 2.51, 2.01),Yellow,(0.05, 0.05, 0.05),0,0
+2025-01-08 18:10:57,5.75,True,False,(-2.83, 1.71, 0.45),Blue,(0.08, 0.08, 0.08),1,0
+2025-01-08 18:10:58,6.32,False,False,None,Yellow,(0.05, 0.05, 0.05),1,0
+2025-01-08 18:11:00,6.32,False,False,None,Yellow,(0.05, 0.05, 0.05),1,0
+2025-01-08 18:11:01,6.32,False,False,None,Yellow,(0.05, 0.05, 0.05),1,0
