@@ -51285,11 +51285,15 @@ PrefabInstance:
       objectReference: {fileID: 311654246308589856}
     - target: {fileID: 1201592211157527132, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1201592211157527132, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: eyeYOffset
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201592211157527132, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: enableLogging
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1201592211157527132, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: gazeIndicator
@@ -51396,6 +51400,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 311654246308589856}
     - target: {fileID: 3680906975664830777, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680906975664830777, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: eyeYOffset
       value: 180
       objectReference: {fileID: 0}
@@ -51409,7 +51417,7 @@ PrefabInstance:
       objectReference: {fileID: 311654246308589856}
     - target: {fileID: 3993483535985441222, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3993483535985441222, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: eyeYOffset
@@ -51501,10 +51509,27 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 8981288130281619980}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &8981288130281619980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414419983652825970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &5535818940590338217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51676,7 +51701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231495904339511538, guid: 8b13b070429a7684eb2c1ae2367ad765, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7231495904339511549, guid: 8b13b070429a7684eb2c1ae2367ad765, type: 3}
       propertyPath: m_RootOrder
