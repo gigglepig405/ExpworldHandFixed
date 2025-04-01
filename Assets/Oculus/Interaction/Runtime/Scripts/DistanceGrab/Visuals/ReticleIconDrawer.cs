@@ -100,6 +100,7 @@ namespace Oculus.Interaction.DistanceReticles
             {
                 _renderer.material.mainTexture = dataIcon.CustomIcon;
             }
+
             else
             {
                 _renderer.material.mainTexture = _defaultIcon;

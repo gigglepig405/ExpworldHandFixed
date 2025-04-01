@@ -219,6 +219,7 @@ MonoBehaviour:
   eyeXOffset: 0
   eyeYOffset: 0
   focusOBJ: 
+  smoothingFactor: 0.1
 --- !u!114 &7131071326374651063
 MonoBehaviour:
   m_ObjectHideFlags: 0

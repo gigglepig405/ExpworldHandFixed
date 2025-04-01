@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Metaface.Utilities
 {
-    public class MidEyeGazeOnNoBallOff: MonoBehaviour
+    public class MidEyeGazeOnNoBallOff : MonoBehaviour
     {
         [SerializeField] OVREyeGaze leftEye;
         [SerializeField] OVREyeGaze rightEye;
@@ -34,9 +34,14 @@ namespace Metaface.Utilities
         private MidEyeGazeHelper midEyeHelper;
         public string focusOBJ;
 
+        // 新增：用于平滑小球位置的变量
+        private Vector3 _smoothedPosition;
+        [Range(0f, 1f)]
+        public float smoothingFactor = 0.1f;  // 值越小移动越平滑（跟随越慢）
+
         void Start()
         {
-            // Initialize components
+            // 初始化组件
             midRay = midRayOB.GetComponent<LineRenderer>();
             gazeIndicator = transform.GetChild(1).gameObject;
 
@@ -45,12 +50,15 @@ namespace Metaface.Utilities
                 gazeIndicator.AddComponent<MeshRenderer>().material = new Material(Shader.Find("Standard"));
             }
 
-            // Set initial properties
+            // 设置初始颜色和尺寸
             gazeIndicator.GetComponent<Renderer>().material.color = Color.yellow;
             currentScale = gazeIndicator.transform.localScale;
             midEyeHelper = GetComponent<MidEyeGazeHelper>();
 
-            // Setup data storage
+            // 初始化平滑位置为当前小球位置
+            _smoothedPosition = gazeIndicator.transform.position;
+
+            // 设置数据存储
             string directory = Application.dataPath + "/MidEyeGazeOnNoBallOff";
             if (!Directory.Exists(directory))
             {
@@ -65,13 +73,13 @@ namespace Metaface.Utilities
 
         void Update()
         {
-            // Eye gaze processing
+            // 眼动追踪处理
             RaycastHit hitMid;
             bool didHit = RaycastMidEye(leftEye, rightEye, out hitMid, midRay, maxGazeDistance);
             UpdateMidEye(didHit, hitMid);
             focusOBJ = midEyeHelper.focusOBJ;
 
-            // Log data continuously
+            // 持续记录数据
             LogData();
         }
 
@@ -79,18 +87,24 @@ namespace Metaface.Utilities
         {
             if (didHit)
             {
-                // Update position
-                transform.GetChild(1).transform.position = hit.point;
-                gazeIndicator.transform.position = hit.point;
+                // 获取射线击中的目标位置
+                Vector3 desiredPosition = hit.point;
 
-                // Update gaze status
+                // 使用 Lerp 平滑插值更新 _smoothedPosition
+                _smoothedPosition = Vector3.Lerp(_smoothedPosition, desiredPosition, smoothingFactor);
+
+                // 更新小球位置为平滑后的结果
+                transform.GetChild(1).transform.position = _smoothedPosition;
+                gazeIndicator.transform.position = _smoothedPosition;
+
+                // 更新眼动状态
                 if (!isGazing)
                 {
                     isGazing = true;
                     triggerCount++;
                 }
 
-                // Accumulate gaze time
+                // 累计注视时间
                 gazeTimer += Time.deltaTime;
                 totalGazeTime += Time.deltaTime;
             }
@@ -100,7 +114,7 @@ namespace Metaface.Utilities
                 gazeTimer = 0f;
             }
 
-            // Maintain yellow color and original size
+            // 保持小球颜色和尺寸
             gazeIndicator.GetComponent<Renderer>().material.color = Color.yellow;
             gazeIndicator.transform.localScale = currentScale;
             currentColor = Color.yellow;
@@ -118,8 +132,8 @@ namespace Metaface.Utilities
             {
                 visualRay.SetPositions(new Vector3[]
                 {
-                        (adjustedEyeL.transform.position + adjustedEyeR.transform.position) / 2,
-                        (adjustedEyeL.forward * distance + adjustedEyeR.forward * distance) / 2
+                    (adjustedEyeL.transform.position + adjustedEyeR.transform.position) / 2,
+                    (adjustedEyeL.forward * distance + adjustedEyeR.forward * distance) / 2
                 });
             }
 
@@ -143,5 +157,3 @@ namespace Metaface.Utilities
         }
     }
 }
-
-
