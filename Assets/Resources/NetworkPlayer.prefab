@@ -51480,6 +51480,14 @@ PrefabInstance:
       propertyPath: eyeYOffset
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 6336499726579102362, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336499726579102362, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6920226533674879507, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_Parameters.colorGradient.atime0
       value: 0

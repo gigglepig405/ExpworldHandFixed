@@ -26,10 +26,7 @@ using UnityEngine;
 
 namespace Oculus.Interaction.HandGrab
 {
-    /// <summary>
-    /// 该 DistanceHandGrabInteractor 实现了远距离抓取功能，
-    /// 同时将抓取锚点修改为使用 GazeIndicator（即你注视的位置）。
-    /// 修改主要包括：
+
     /// 1. 在 ComputeCandidate() 中使用 _gzIndicator.position 作为候选物体的击中点；
     /// 2. 在生成运动和计算指针姿势时，采用 _gzIndicator 的 pose 作为目标。
     /// </summary>
