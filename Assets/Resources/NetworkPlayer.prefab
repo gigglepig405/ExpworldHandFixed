@@ -2367,7 +2367,7 @@ Transform:
   - {fileID: 1918895484034865154}
   - {fileID: 3268439723736894283}
   m_Father: {fileID: 7674824576126635143}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533950369160740709
 GameObject:
@@ -2506,6 +2506,7 @@ GameObject:
   - component: {fileID: 2388283941395910011}
   - component: {fileID: 1582505530461884058}
   - component: {fileID: 7268321027393875617}
+  - component: {fileID: 7718636707776431023}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -2561,6 +2562,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 1582505530461884058}
+--- !u!114 &7718636707776431023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568633663836926544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0cc5e8f16e02149b6f440f70407514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileNamePrefix: HandDataLogger
+  logToFile: 1
+  logJoints: 1
+  logVelocity: 1
+  logAcceleration: 1
+  logGrabEvents: 1
+  handName: Right
+  pinchThreshold: 0.9
 --- !u!1 &569302817493587127
 GameObject:
   m_ObjectHideFlags: 0
@@ -11544,9 +11565,8 @@ Transform:
   - {fileID: 7167458700631947566}
   - {fileID: 923875605480940863}
   - {fileID: 2562967586555221056}
-  - {fileID: 5851641645999826642}
   m_Father: {fileID: 7674824576126635143}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2280634166544716485
 GameObject:
@@ -17481,6 +17501,7 @@ GameObject:
   - component: {fileID: 1370324714969196036}
   - component: {fileID: 2927477434187730979}
   - component: {fileID: 362970556587968504}
+  - component: {fileID: 3667833026464303311}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -17536,6 +17557,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 2927477434187730979}
+--- !u!114 &3667833026464303311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878622196241720822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0cc5e8f16e02149b6f440f70407514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileNamePrefix: HandDataLogger
+  logToFile: 1
+  logJoints: 1
+  logVelocity: 1
+  logAcceleration: 1
+  logGrabEvents: 1
+  handName: Left
+  pinchThreshold: 0.9
 --- !u!1 &2885073118624529433
 GameObject:
   m_ObjectHideFlags: 0
@@ -45851,6 +45892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5851641645999826642}
   - {fileID: 4206701046032514444}
   - {fileID: 3788293602779349521}
   m_Father: {fileID: 0}
@@ -51322,7 +51364,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4206701046032514444}
+    m_TransformParent: {fileID: 7674824576126635143}
     m_Modifications:
     - target: {fileID: 647482932585369555, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: leftEye
@@ -51356,6 +51398,10 @@ PrefabInstance:
       propertyPath: gazeIndicator
       value: 
       objectReference: {fileID: 7414419983652825970}
+    - target: {fileID: 1201592211157527132, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: smoothingTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1740329861102326721, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_Name
       value: EyeGazeDebugger
@@ -51374,7 +51420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -51410,7 +51456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5154295
+      value: 0.7641277
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51430,11 +51476,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.555467
+      value: -1.5666254
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.36716
+      value: 1.0391599
       objectReference: {fileID: 0}
     - target: {fileID: 2014192716943170365, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -51458,7 +51504,7 @@ PrefabInstance:
       objectReference: {fileID: 311654246308589856}
     - target: {fileID: 3680906975664830777, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3680906975664830777, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: eyeYOffset
@@ -51479,6 +51525,10 @@ PrefabInstance:
     - target: {fileID: 3993483535985441222, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: eyeYOffset
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993483535985441222, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: smoothingTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6336499726579102362, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: m_Enabled
@@ -51525,8 +51575,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 311654246308589856}
     - target: {fileID: 7131071326374651063, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131071326374651063, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: eyeYOffset
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131071326374651063, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
+      propertyPath: smoothingTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8186073983343494210, guid: 302497bb545fa934c830f8e5ab2d461b, type: 3}
       propertyPath: leftEye

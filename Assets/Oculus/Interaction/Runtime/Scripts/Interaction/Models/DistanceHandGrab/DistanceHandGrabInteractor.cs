@@ -26,10 +26,6 @@ using UnityEngine;
 
 namespace Oculus.Interaction.HandGrab
 {
-
-    /// 1. 在 ComputeCandidate() 中使用 _gzIndicator.position 作为候选物体的击中点；
-    /// 2. 在生成运动和计算指针姿势时，采用 _gzIndicator 的 pose 作为目标。
-    /// </summary>
     public class DistanceHandGrabInteractor :
         PointerInteractor<DistanceHandGrabInteractor, DistanceHandGrabInteractable>,
         IHandGrabState, IHandGrabber, IDistanceInteractor
@@ -44,7 +40,6 @@ namespace Oculus.Interaction.HandGrab
         [SerializeField]
         private Transform _grabOrigin;
 
-        // 用于替换默认锚点的 GazeIndicator（你注视的位置）
         [SerializeField]
         private Transform _gzIndicator;
 
@@ -63,8 +58,8 @@ namespace Oculus.Interaction.HandGrab
         public IVelocityCalculator VelocityCalculator { get; set; }
 
         [SerializeField]
-        private DistantCandidateComputer<DistanceHandGrabInteractor, DistanceHandGrabInteractable> _distantCandidateComputer
-            = new DistantCandidateComputer<DistanceHandGrabInteractor, DistanceHandGrabInteractable>();
+        private DistantCandidateComputer<DistanceHandGrabInteractor, DistanceHandGrabInteractable> _distantCandidateComputer =
+            new DistantCandidateComputer<DistanceHandGrabInteractor, DistanceHandGrabInteractable>();
 
         private HandGrabTarget _currentTarget = new HandGrabTarget();
         private HandGrabResult _cachedResult = new HandGrabResult();
@@ -80,6 +75,11 @@ namespace Oculus.Interaction.HandGrab
         private bool _handGrabShouldUnselect = false;
 
         private HandGrabbableData _lastInteractableData = new HandGrabbableData();
+        private DistanceHandGrabInteractable _lockedCandidate = null;
+
+        private float _grabSmoothingFactor = 0.1f; 
+        private float _maxLinearVelocity = 1.0f;
+        private float _maxAngularVelocity = 1.0f;
 
         #region IHandGrabber
 
@@ -150,7 +150,6 @@ namespace Oculus.Interaction.HandGrab
             base.DoPreprocess();
 
             _wristPose = _grabOrigin.GetPose();
-
             if (Hand.Handedness == Handedness.Left)
             {
                 _wristPose.rotation *= Quaternion.Euler(180f, 0f, 0f);
@@ -168,8 +167,6 @@ namespace Oculus.Interaction.HandGrab
 
         protected override void DoHoverUpdate()
         {
-            print("b");
-
             base.DoHoverUpdate();
 
             _handGrabShouldSelect = false;
@@ -178,13 +175,18 @@ namespace Oculus.Interaction.HandGrab
                 HandGrabTarget = null;
                 _wristToGrabAnchorOffset = Pose.identity;
                 _grabStrength = 0f;
+                _lockedCandidate = null;
                 return;
             }
 
             _wristToGrabAnchorOffset = GetGrabAnchorOffset(_currentTarget.Anchor, _wristPose);
-            _grabStrength = Grab.HandGrab.ComputeHandGrabScore(this, Interactable, out GrabTypeFlags hoverGrabTypes);
-            HandGrabTarget = _currentTarget;
 
+
+            float newGrabStrength = Grab.HandGrab.ComputeHandGrabScore(this, Interactable, out GrabTypeFlags hoverGrabTypes);
+
+            _grabStrength = Mathf.Lerp(_grabStrength, newGrabStrength, _grabSmoothingFactor);
+
+            HandGrabTarget = _currentTarget;
             if (Interactable != null &&
                 Grab.HandGrab.ComputeShouldSelect(this, Interactable, out GrabTypeFlags selectingGrabTypes))
             {
@@ -205,9 +207,12 @@ namespace Oculus.Interaction.HandGrab
             }
 
             _grabStrength = 1f;
-            // 使用 GazeIndicator 的 pose 作为运动的目标姿态
-            Pose targetPose = _gzIndicator.GetPose();
-            _movement.UpdateTarget(targetPose);
+
+            Pose rawTargetPose = _gzIndicator.GetPose();
+
+            Pose currentMotionPose = _movement != null ? _movement.Pose : rawTargetPose;
+            Pose smoothedTargetPose = LerpPose(currentMotionPose, rawTargetPose, _grabSmoothingFactor);
+            _movement.UpdateTarget(smoothedTargetPose);
             _movement.Tick();
 
             Grab.HandGrab.StoreGrabData(this, interactable, ref _lastInteractableData);
@@ -226,7 +231,6 @@ namespace Oculus.Interaction.HandGrab
             }
 
             _wristToGrabAnchorOffset = GetGrabAnchorOffset(_currentTarget.Anchor, _wristPose);
-            // 使用 GazeIndicator 的 pose 作为目标抓取位置
             Pose targetPose = _gzIndicator.GetPose();
             Pose interactableGrabStartPose = _currentTarget.WorldGrabPose;
             _movement = interactable.GenerateMovement(interactableGrabStartPose, targetPose);
@@ -238,16 +242,20 @@ namespace Oculus.Interaction.HandGrab
             base.InteractableUnselected(interactable);
             _movement = null;
 
+            _lockedCandidate = null;
+
             ReleaseVelocityInformation throwVelocity = VelocityCalculator != null ?
                 VelocityCalculator.CalculateThrowVelocity(interactable.transform) :
                 new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);
+
+            throwVelocity.LinearVelocity = Vector3.ClampMagnitude(throwVelocity.LinearVelocity, _maxLinearVelocity);
+            throwVelocity.AngularVelocity = Vector3.ClampMagnitude(throwVelocity.AngularVelocity, _maxAngularVelocity);
+
             interactable.ApplyVelocities(throwVelocity.LinearVelocity, throwVelocity.AngularVelocity);
         }
 
         protected override void HandlePointerEventRaised(PointerEvent evt)
         {
-            print("f");
-
             base.HandlePointerEventRaised(evt);
 
             if (SelectedInteractable == null)
@@ -258,7 +266,6 @@ namespace Oculus.Interaction.HandGrab
             if (evt.Identifier != Identifier &&
                 (evt.Type == PointerEventType.Select || evt.Type == PointerEventType.Unselect))
             {
-                // 采用 GazeIndicator 的 pose 计算抓取姿势
                 Pose targetPose = _gzIndicator.GetPose();
                 if (SelectedInteractable.ResetGrabOnGrabsUpdated)
                 {
@@ -278,8 +285,6 @@ namespace Oculus.Interaction.HandGrab
 
         protected override Pose ComputePointerPose()
         {
-            print("g");
-
             if (SelectedInteractable != null)
             {
                 return _movement.Pose;
@@ -293,15 +298,12 @@ namespace Oculus.Interaction.HandGrab
                        _wristPose;
             }
 
-            // 当没有选中物体时，返回 GazeIndicator 的 pose
             return _gzIndicator.GetPose();
         }
         #endregion
 
         private Pose GetGrabAnchorPose(DistanceHandGrabInteractable interactable, GrabTypeFlags grabTypes, out HandGrabTarget.GrabAnchor anchorMode)
         {
-            print("h");
-
             if (_gripPoint != null && (grabTypes & GrabTypeFlags.Palm) != 0)
             {
                 anchorMode = HandGrabTarget.GrabAnchor.Palm;
@@ -335,8 +337,6 @@ namespace Oculus.Interaction.HandGrab
 
         private Pose GetGrabAnchorOffset(HandGrabTarget.GrabAnchor anchor, in Pose from)
         {
-            print("i");
-
             if (anchor == HandGrabTarget.GrabAnchor.Pinch)
             {
                 return PoseUtils.Delta(from, _pinchPose);
@@ -345,7 +345,6 @@ namespace Oculus.Interaction.HandGrab
             {
                 return PoseUtils.Delta(from, _gripPose);
             }
-
             return PoseUtils.Delta(from, _wristPose);
         }
 
@@ -361,8 +360,6 @@ namespace Oculus.Interaction.HandGrab
 
         public override bool CanSelect(DistanceHandGrabInteractable interactable)
         {
-            print("j");
-
             if (!base.CanSelect(interactable))
             {
                 return false;
@@ -375,39 +372,35 @@ namespace Oculus.Interaction.HandGrab
             {
                 return false;
             }
-
             return true;
         }
 
         protected override DistanceHandGrabInteractable ComputeCandidate()
         {
-            DistanceHandGrabInteractable interactable = _distantCandidateComputer.ComputeCandidate(
-               DistanceHandGrabInteractable.Registry, this, out Vector3 bestHitPoint);
+            DistanceHandGrabInteractable candidate = _distantCandidateComputer.ComputeCandidate(
+                DistanceHandGrabInteractable.Registry, this, out Vector3 bestHitPoint);
 
-            // 使用 GazeIndicator 的位置作为候选物体的命中点
             bestHitPoint = _gzIndicator.position;
             HitPoint = bestHitPoint;
 
-            if (interactable == null)
+            if (candidate == null)
             {
+                _lockedCandidate = null;
                 return null;
             }
 
-            float fingerScore = 1.0f;
-            if (!Grab.HandGrab.ComputeShouldSelect(this, interactable, out GrabTypeFlags selectingGrabTypes))
+            if (!Grab.HandGrab.ComputeShouldSelect(this, candidate, out GrabTypeFlags selectingGrabTypes))
             {
-                fingerScore = Grab.HandGrab.ComputeHandGrabScore(this, interactable, out selectingGrabTypes);
+                float fingerScore = Grab.HandGrab.ComputeHandGrabScore(this, candidate, out selectingGrabTypes);
             }
-
             if (selectingGrabTypes == GrabTypeFlags.None)
             {
-                selectingGrabTypes = interactable.SupportedGrabTypes & this.SupportedGrabTypes;
+                selectingGrabTypes = candidate.SupportedGrabTypes & this.SupportedGrabTypes;
             }
 
-            Pose grabPose = GetGrabAnchorPose(interactable, selectingGrabTypes, out HandGrabTarget.GrabAnchor anchorMode);
+            Pose grabPose = GetGrabAnchorPose(candidate, selectingGrabTypes, out HandGrabTarget.GrabAnchor anchorMode);
             Pose worldPose = new Pose(bestHitPoint, grabPose.rotation);
-            bool poseFound = interactable.CalculateBestPose(worldPose, Hand.Scale, Hand.Handedness, ref _cachedResult);
-
+            bool poseFound = candidate.CalculateBestPose(worldPose, Hand.Scale, Hand.Handedness, ref _cachedResult);
             if (!poseFound)
             {
                 return null;
@@ -415,9 +408,18 @@ namespace Oculus.Interaction.HandGrab
 
             Pose offset = GetGrabAnchorOffset(anchorMode, grabPose);
             _cachedResult.RelativePose = PoseUtils.Multiply(_cachedResult.RelativePose, offset);
-            _currentTarget.Set(interactable.RelativeTo, interactable.HandAlignment, anchorMode, _cachedResult);
+            _currentTarget.Set(candidate.RelativeTo, candidate.HandAlignment, anchorMode, _cachedResult);
+            _lockedCandidate = candidate;
 
-            return interactable;
+            return candidate;
+        }
+
+        private Pose LerpPose(Pose a, Pose b, float t)
+        {
+            return new Pose(
+                Vector3.Lerp(a.position, b.position, t),
+                Quaternion.Slerp(a.rotation, b.rotation, t)
+            );
         }
 
         #region Inject
@@ -477,3 +479,4 @@ namespace Oculus.Interaction.HandGrab
         #endregion
     }
 }
+

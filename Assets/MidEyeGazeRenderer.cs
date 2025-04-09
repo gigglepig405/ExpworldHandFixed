@@ -8,12 +8,12 @@ namespace Metaface.Utilities
 {
     public class MidEyeGazeRenderer : MonoBehaviour
     {
+        [Header("Eye Gaze Settings")]
         [SerializeField] OVREyeGaze leftEye;
         [SerializeField] OVREyeGaze rightEye;
         [SerializeField] GameObject midRayOB;
         [SerializeField] private bool showRays = false;
         [SerializeField] private float maxGazeDistance = 1000f;
-
         [SerializeField] private bool enableLogging = false;
 
         private LineRenderer midRay;
@@ -22,64 +22,81 @@ namespace Metaface.Utilities
         public float eyeXOffset, eyeYOffset;
         private Transform adjustedEyeL, adjustedEyeR;
 
-        // Timer variables
+        // -------------------------------
+        // 眼动采样数据相关变量
+        // -------------------------------
         private float gazeTimer = 0f;
         private bool isGazing = false;
-        private float gazeThreshold = 5f; // 5 seconds to trigger blue
-        private float blueDuration = 4f;  // Blue lasts for 4 seconds
+        private float gazeThreshold = 5f; // 持续凝视 5 秒触发蓝色状态
+        private float totalGazeTime = 0f;
+        private Vector3 gazeDirection; // 当前采样到的视线方向
+
+        // -------------------------------
+        // 任务交互数据相关变量
+        // -------------------------------
+        private float blueDuration = 4f;  // 蓝色状态维持 4 秒
         private bool isBlueActive = false;
         private float blueTimer = 0f;
-        private float flashSpeed = 10f;  // Flashing speed
-        private Vector3 originalScale;
+        private int blueTriggerCount = 0; // 记录目标指示事件次数
 
-        // Blink variables
+        // -------------------------------
+        // 眼闭合/眨眼控制（用于开启/关闭 GazeIndicator）
+        // -------------------------------
         private float eyeCloseTimer = 0f;
-        private float eyeCloseThreshold = 1.5f; // Time to consider eyes closed
+        private float eyeCloseThreshold = 1.5f; // 闭眼超过 1.5 秒视为一次眨眼
         private bool isEyeClosed = false;
-        private bool isEyeGazeActive = true; // Controls whether gaze is active
+        private bool isEyeGazeActive = true; // 控制是否显示 GazeIndicator
+        private int ballToggleCount = 0;      // 记录闭眼切换次数
 
-        // Statistics variables
-        private float totalGazeTime = 0f;
-        private int blueTriggerCount = 0;
-        private int ballToggleCount = 0;
-        private string path;
-        private string fileName;
-
-        // Additional data collection variables
+        // -------------------------------
+        // 辅助/显示数据相关变量
+        // -------------------------------
         private Color currentColor = Color.yellow;
+        private Vector3 originalScale;
         private Vector3 currentScale;
         private string focusPosition = "None";
 
-        // File saving variables
-        private float logInterval = 1f; // Log data every 1 second
+        // -------------------------------
+        // 文件保存及日志数据
+        // -------------------------------
+        private string path;
+        private string fileName;
+        private float logInterval = 1f; // 每 1 秒写入一次数据
         private float logTimer = 0f;
+
+        // -------------------------------
+        // 平滑位置更新：采用 SmoothDamp
+        // -------------------------------
+        private Vector3 _smoothedPosition;
+        private Vector3 _velocity = Vector3.zero; // 用于 SmoothDamp 的速度变量
+        [SerializeField] private float smoothingTime = 0.05f;  // 平滑时间，值越小响应越快
 
         void Start()
         {
-            // Initialize LineRenderer and indicator
+            // 初始化 LineRenderer 和 GazeIndicator
             midRay = midRayOB.GetComponent<LineRenderer>();
             gazeIndicator = transform.GetChild(1).gameObject;
-
             if (gazeIndicator.GetComponent<Renderer>() == null)
             {
                 gazeIndicator.AddComponent<MeshRenderer>().material = new Material(Shader.Find("Standard"));
             }
-
-            // Default material settings
-            var mat = gazeIndicator.GetComponent<Renderer>().material;
+            Material mat = gazeIndicator.GetComponent<Renderer>().material;
             SetMaterialToFadeMode(mat);
-            mat.color = new Color(1f, 1f, 0f, 0.3f); // Yellow with transparency
+            // 初始材质设置为半透明黄色
+            mat.color = new Color(1f, 1f, 0f, 0.3f);
 
             originalScale = gazeIndicator.transform.localScale;
             currentScale = originalScale;
 
-            // Setup data storage
+            // 初始化平滑位置为当前小球位置
+            _smoothedPosition = gazeIndicator.transform.position;
+
+            // 设置数据存储目录（在 Application.dataPath 下创建一个文件夹）
             string directory = Application.dataPath + "/MidEyeGazeRenderer";
             if (!Directory.Exists(directory))
             {
                 Directory.CreateDirectory(directory);
             }
-
             int fileIndex = 1;
             do
             {
@@ -88,27 +105,31 @@ namespace Metaface.Utilities
                 fileIndex++;
             } while (File.Exists(path));
 
-            // Updated CSV header with additional fields
-            File.AppendAllText(path, "Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,BallColor,BallScale,TriggerCount,BallToggleCount\n");
+            // CSV 文件表头：包含时间戳、眼动采样数据（FocusPosition, GazeDirection, TotalGazeTime）、任务交互数据（BlueTriggerCount, BallToggleCount）
+            // 以及辅助数据（左右眼位置、BallColor、BallScale）
+            File.AppendAllText(path, "Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,GazeDirection,LeftEyePosition,RightEyePosition,BallColor,BallScale,BlueTriggerCount,BallToggleCount\n");
         }
 
         void Update()
         {
+            // 处理眨眼检测：闭眼/睁眼切换 GazeIndicator 开关
             DetectEyeBlink();
 
+            // 执行射线检测，获取左右眼视线信息
             RaycastHit hitMid;
             bool didHit = RaycastMidEye(leftEye, rightEye, out hitMid, midRay, maxGazeDistance);
             UpdateMidEye(didHit, hitMid);
 
-            // Log data every second
+            // 每 logInterval 秒记录一次数据
             logTimer += Time.deltaTime;
             if (logTimer >= logInterval)
             {
-                LogData(); // Write data to CSV
-                logTimer = 0f; // Reset timer
+                LogData();
+                logTimer = 0f;
             }
         }
 
+        #region Eye Blink & Gaze Toggle
         private void DetectEyeBlink()
         {
             bool isLeftEyeClosed = Vector3.Dot(leftEye.transform.forward, Vector3.down) > 0.85f;
@@ -128,8 +149,7 @@ namespace Metaface.Utilities
             {
                 isEyeClosed = true;
                 ballToggleCount++;
-
-                // Toggle gaze activity
+                // 切换是否允许眼动追踪（开启或关闭 GazeIndicator）
                 isEyeGazeActive = !isEyeGazeActive;
                 gazeIndicator.SetActive(isEyeGazeActive);
 
@@ -140,37 +160,42 @@ namespace Metaface.Utilities
                 isEyeClosed = false;
             }
         }
+        #endregion
 
+        #region Raycasting & Gaze Sampling
         private bool RaycastMidEye(OVREyeGaze gazeL, OVREyeGaze gazeR, out RaycastHit hit, LineRenderer visualRay, float distance = 1000f)
         {
             adjustedEyeL = gazeL.transform;
             adjustedEyeR = gazeR.transform;
-
             adjustedEyeL.eulerAngles = gazeL.transform.eulerAngles + new Vector3(eyeXOffset, eyeYOffset, 0f);
             adjustedEyeR.eulerAngles = gazeR.transform.eulerAngles + new Vector3(eyeXOffset, eyeYOffset, 0f);
 
             Vector3 midPosition = (adjustedEyeL.position + adjustedEyeR.position) / 2;
             Vector3 midDirection = ((adjustedEyeL.forward + adjustedEyeR.forward) / 2).normalized;
+            // 保存采样到的视线方向（眼动采样数据）
+            gazeDirection = midDirection;
 
             if (showRays)
             {
-                midRay.SetPositions(new Vector3[] { midPosition, midPosition + midDirection * distance });
+                visualRay.SetPositions(new Vector3[] { midPosition, midPosition + midDirection * distance });
             }
 
             bool didHit = Physics.Raycast(midPosition, midDirection, out hit, distance);
-
             Log($"Raycast hit: {didHit}, Position: {(didHit ? hit.point.ToString("F2") : "N/A")}");
-
             return didHit;
         }
+        #endregion
 
+        #region Update Gaze & Task Interaction
         private void UpdateMidEye(bool didHit, RaycastHit hit)
         {
             if (didHit && isEyeGazeActive)
             {
-                transform.GetChild(1).transform.position = hit.point;
-                gazeIndicator.transform.position = hit.point;
-                focusPosition = hit.point.ToString("F2");
+                // 使用 SmoothDamp 平滑更新 _smoothedPosition，使 gazeIndicator 跟踪射线击中点
+                _smoothedPosition = Vector3.SmoothDamp(_smoothedPosition, hit.point, ref _velocity, smoothingTime);
+                gazeIndicator.transform.position = _smoothedPosition;
+                // 更新记录的 focusPosition
+                focusPosition = _smoothedPosition.ToString("F2");
 
                 if (!isGazing)
                 {
@@ -180,7 +205,6 @@ namespace Metaface.Utilities
 
                 gazeTimer += Time.deltaTime;
                 totalGazeTime += Time.deltaTime;
-
                 Log($"Gaze Timer: {gazeTimer}, Total Gaze Time: {totalGazeTime}");
 
                 if (gazeTimer >= gazeThreshold && !isBlueActive)
@@ -188,23 +212,18 @@ namespace Metaface.Utilities
                     isBlueActive = true;
                     blueTimer = 0f;
                     blueTriggerCount++;
-
                     Log($"Blue state activated. blueTriggerCount: {blueTriggerCount}");
                 }
-
                 if (isBlueActive)
                 {
                     blueTimer += Time.deltaTime;
-
                     if (blueTimer >= blueDuration)
                     {
                         isBlueActive = false;
                         gazeTimer = 0f;
-
-                        Log($"Blue state deactivated.");
+                        Log("Blue state deactivated.");
                     }
                 }
-
                 UpdateIndicator();
             }
             else
@@ -219,11 +238,12 @@ namespace Metaface.Utilities
                 focusPosition = "None";
             }
         }
+        #endregion
 
+        #region Update & Reset Indicator Appearance
         private void UpdateIndicator()
         {
-            var mat = gazeIndicator.GetComponent<Renderer>().material;
-
+            Material mat = gazeIndicator.GetComponent<Renderer>().material;
             if (isBlueActive)
             {
                 currentColor = Color.blue;
@@ -234,7 +254,6 @@ namespace Metaface.Utilities
                 currentColor = Color.yellow;
                 currentScale = originalScale;
             }
-
             mat.color = currentColor;
             gazeIndicator.transform.localScale = currentScale;
         }
@@ -243,22 +262,27 @@ namespace Metaface.Utilities
         {
             currentColor = Color.yellow;
             currentScale = originalScale;
-
-            var mat = gazeIndicator.GetComponent<Renderer>().material;
+            Material mat = gazeIndicator.GetComponent<Renderer>().material;
             mat.color = currentColor;
             gazeIndicator.transform.localScale = currentScale;
         }
+        #endregion
 
+        #region Data Logging
         private void LogData()
         {
             try
             {
                 string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 string ballColorString = GetBallColorString();
-                string eyeClosedStatus = !isEyeGazeActive ? "True" : "False"; // Reflect gaze active state
-                string formattedScale = FormatVector3(currentScale);
+                string eyeClosedStatus = !isEyeGazeActive ? "True" : "False";
+                string leftEyePos = $"\"{FormatVector3(leftEye.transform.position)}\"";
+                string rightEyePos = $"\"{FormatVector3(rightEye.transform.position)}\"";
+                string gazeDirectionStr = $"\"{FormatVector3(gazeDirection)}\"";
+                string focusPositionQuoted = $"\"{focusPosition}\"";
+                string formattedScaleQuoted = $"\"{FormatVector3(currentScale)}\"";
 
-                string line = $"{timestamp},{totalGazeTime:F2},{isGazing},{eyeClosedStatus},{focusPosition},{ballColorString},{formattedScale},{blueTriggerCount},{ballToggleCount}\n";
+                string line = $"{timestamp},{totalGazeTime:F2},{isGazing},{eyeClosedStatus},{focusPositionQuoted},{gazeDirectionStr},{leftEyePos},{rightEyePos},{ballColorString},{formattedScaleQuoted},{blueTriggerCount},{ballToggleCount}\n";
                 File.AppendAllText(path, line);
             }
             catch (Exception ex)
@@ -266,7 +290,9 @@ namespace Metaface.Utilities
                 LogError($"Failed to log data: {ex.Message}");
             }
         }
+        #endregion
 
+        #region Helper Methods
         private string GetBallColorString()
         {
             if (currentColor == Color.blue)
@@ -309,8 +335,10 @@ namespace Metaface.Utilities
                 UnityEngine.Debug.LogError(message);
             }
         }
+        #endregion
     }
 }
+
 
 
 
