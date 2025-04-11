@@ -247,7 +247,7 @@ namespace Metaface.Utilities
             if (isBlueActive)
             {
                 currentColor = Color.blue;
-                currentScale = originalScale * 1.5f;
+                currentScale = originalScale * 2.5f;
             }
             else
             {

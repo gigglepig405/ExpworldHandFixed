@@ -265,30 +265,27 @@ namespace Metaface.Utilities
             float elapsed = 0f;
             var mat = gazeIndicator.GetComponent<Renderer>().material;
 
-            // 让小球在闪烁时变大并在一定范围内变化
             while (elapsed < duration)
             {
-                // 根据 flashSpeed 做 PingPong 插值 [0, 1]
+                // alpha 从 0.2 到 0.6 之间变化
                 float t = Mathf.PingPong(Time.time * flashSpeed, 1f);
-
-                // 颜色从 alpha 0.2 -> 0.6 之间波动
                 float alpha = Mathf.Lerp(0.2f, 0.6f, t);
                 mat.color = new Color(0f, 0f, 1f, alpha);
 
-                // 尺寸在 originalScale -> 1.5x 之间波动
-                float scaleFactor = Mathf.Lerp(1.0f, 1.5f, t);
-                gazeIndicator.transform.localScale = originalScale * scaleFactor;
+                // 固定蓝色时尺寸为 (0.13, 0.13, 0.13)
+                gazeIndicator.transform.localScale = new Vector3(0.13f, 0.13f, 0.13f);
 
                 elapsed += Time.deltaTime;
                 yield return null;
             }
 
-            // 闪蓝结束后恢复到黄色与原始大小
+            // 恢复黄色和固定默认大小（仍为 0.13）
             mat.color = new Color(1f, 1f, 0f, 0.3f);
-            gazeIndicator.transform.localScale = originalScale;
+            gazeIndicator.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
 
             flashCoroutine = null;
         }
+
         #endregion
 
         #region Data Logging

@@ -1,0 +1,9 @@
+Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,GazeDirection,LeftEyePosition,RightEyePosition,BallColor,BallScale,TriggerCount,BallToggleCount
+Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,GazeDirection,LeftEyePosition,RightEyePosition,BallColor,BallScale,TriggerCount,BallToggleCount
+2025-04-11 17:37:38,0.00,False,False,"None","(-0.09, -0.22, -0.97)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
+2025-04-11 17:37:38,0.00,False,False,"None","(-0.09, -0.22, -0.97)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
+2025-04-11 17:37:39,0.00,False,False,"None","(0.08, -0.40, -0.91)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
+2025-04-11 17:37:39,0.00,False,False,"None","(0.08, -0.40, -0.91)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
+2025-04-11 17:37:40,0.00,False,False,"None","(0.01, -0.10, -1.00)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
+2025-04-11 17:37:41,0.00,False,False,"None","(0.01, -0.11, -0.99)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
+2025-04-11 17:37:42,0.00,False,False,"None","(0.02, -0.12, -0.99)","(0.17, -0.28, -7.98)","(0.10, -0.28, -7.98)",Yellow,"(0.05, 0.05, 0.05)",0,0
