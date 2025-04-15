@@ -9,9 +9,9 @@ namespace Metaface.Utilities
     public class MidEyeGazeRenderer : MonoBehaviour
     {
         [Header("Eye Gaze Settings")]
-        [SerializeField] OVREyeGaze leftEye;
-        [SerializeField] OVREyeGaze rightEye;
-        [SerializeField] GameObject midRayOB;
+        [SerializeField] private OVREyeGaze leftEye;
+        [SerializeField] private OVREyeGaze rightEye;
+        [SerializeField] private GameObject midRayOB;
         [SerializeField] private bool showRays = false;
         [SerializeField] private float maxGazeDistance = 1000f;
         [SerializeField] private bool enableLogging = false;
@@ -19,8 +19,8 @@ namespace Metaface.Utilities
         private LineRenderer midRay;
         private GameObject gazeIndicator;
 
+        // 偏移设置（单位为角度），不直接修改眼睛 transform，而是在计算时叠加偏移
         public float eyeXOffset, eyeYOffset;
-        private Transform adjustedEyeL, adjustedEyeR;
 
         // -------------------------------
         // 眼动采样数据相关变量
@@ -29,27 +29,27 @@ namespace Metaface.Utilities
         private bool isGazing = false;
         private float gazeThreshold = 5f; // 持续凝视 5 秒触发蓝色状态
         private float totalGazeTime = 0f;
-        private Vector3 gazeDirection; // 当前采样到的视线方向
+        private Vector3 gazeDirection = Vector3.zero; // 当前平滑后的视线方向
 
         // -------------------------------
         // 任务交互数据相关变量
         // -------------------------------
-        private float blueDuration = 4f;  // 蓝色状态维持 4 秒
+        private float blueDuration = 4f;  // 蓝色状态持续 4 秒
         private bool isBlueActive = false;
         private float blueTimer = 0f;
-        private int blueTriggerCount = 0; // 记录目标指示事件次数
+        private int blueTriggerCount = 0; // 记录触发蓝色状态次数
 
         // -------------------------------
-        // 眼闭合/眨眼控制（用于开启/关闭 GazeIndicator）
+        // 眨眼控制（用于开启/关闭 GazeIndicator）
         // -------------------------------
         private float eyeCloseTimer = 0f;
-        private float eyeCloseThreshold = 1.5f; // 闭眼超过 1.5 秒视为一次眨眼
+        private float eyeCloseThreshold = 1.5f; // 闭眼超过 1.5 秒视为眨眼
         private bool isEyeClosed = false;
         private bool isEyeGazeActive = true; // 控制是否显示 GazeIndicator
-        private int ballToggleCount = 0;      // 记录闭眼切换次数
+        private int ballToggleCount = 0;      // 记录眨眼切换次数
 
         // -------------------------------
-        // 辅助/显示数据相关变量
+        // 辅助/显示数据变量
         // -------------------------------
         private Color currentColor = Color.yellow;
         private Vector3 originalScale;
@@ -57,24 +57,25 @@ namespace Metaface.Utilities
         private string focusPosition = "None";
 
         // -------------------------------
-        // 文件保存及日志数据
+        // 文件保存及日志数据变量
         // -------------------------------
         private string path;
         private string fileName;
-        private float logInterval = 1f; // 每 1 秒写入一次数据
+        private float logInterval = 1f; // 每 1 秒写入一次日志
         private float logTimer = 0f;
 
         // -------------------------------
         // 平滑位置更新：采用 SmoothDamp
         // -------------------------------
         private Vector3 _smoothedPosition;
-        private Vector3 _velocity = Vector3.zero; // 用于 SmoothDamp 的速度变量
-        [SerializeField] private float smoothingTime = 0.05f;  // 平滑时间，值越小响应越快
+        private Vector3 _velocity = Vector3.zero; // SmoothDamp 用速度变量
+        [SerializeField] private float smoothingTime = 0.05f;  // 数值越小响应越快，但平滑度降低
 
         void Start()
         {
             // 初始化 LineRenderer 和 GazeIndicator
             midRay = midRayOB.GetComponent<LineRenderer>();
+            // 这里假设 gazeIndicator 是该物体第 2 个子物体（下标 1）
             gazeIndicator = transform.GetChild(1).gameObject;
             if (gazeIndicator.GetComponent<Renderer>() == null)
             {
@@ -91,7 +92,7 @@ namespace Metaface.Utilities
             // 初始化平滑位置为当前小球位置
             _smoothedPosition = gazeIndicator.transform.position;
 
-            // 设置数据存储目录（在 Application.dataPath 下创建一个文件夹）
+            // 设置数据存储目录（在 Application.dataPath 下创建文件夹）
             string directory = Application.dataPath + "/MidEyeGazeRenderer";
             if (!Directory.Exists(directory))
             {
@@ -105,22 +106,25 @@ namespace Metaface.Utilities
                 fileIndex++;
             } while (File.Exists(path));
 
-            // CSV 文件表头：包含时间戳、眼动采样数据（FocusPosition, GazeDirection, TotalGazeTime）、任务交互数据（BlueTriggerCount, BallToggleCount）
-            // 以及辅助数据（左右眼位置、BallColor、BallScale）
+            // 写入 CSV 文件表头：包含时间戳、眼动数据、任务交互数据、辅助数据
             File.AppendAllText(path, "Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,GazeDirection,LeftEyePosition,RightEyePosition,BallColor,BallScale,BlueTriggerCount,BallToggleCount\n");
         }
 
         void Update()
         {
-            // 处理眨眼检测：闭眼/睁眼切换 GazeIndicator 开关
+            // 处理眨眼检测：判断闭眼情况来切换 GazeIndicator 的显示
             DetectEyeBlink();
 
-            // 执行射线检测，获取左右眼视线信息
+            // 若眼动追踪处于关闭状态则直接返回
+            if (!isEyeGazeActive)
+                return;
+
+            // 执行射线检测，计算视线方向，并更新 gazeIndicator
             RaycastHit hitMid;
-            bool didHit = RaycastMidEye(leftEye, rightEye, out hitMid, midRay, maxGazeDistance);
+            bool didHit = RaycastMidEye(out hitMid, midRay, maxGazeDistance);
             UpdateMidEye(didHit, hitMid);
 
-            // 每 logInterval 秒记录一次数据
+            // 定时记录日志
             logTimer += Time.deltaTime;
             if (logTimer >= logInterval)
             {
@@ -132,6 +136,7 @@ namespace Metaface.Utilities
         #region Eye Blink & Gaze Toggle
         private void DetectEyeBlink()
         {
+            // 通过 Dot 判断眼睛是否接近向下（简单检测闭眼状态）
             bool isLeftEyeClosed = Vector3.Dot(leftEye.transform.forward, Vector3.down) > 0.85f;
             bool isRightEyeClosed = Vector3.Dot(rightEye.transform.forward, Vector3.down) > 0.85f;
             bool eyesClosed = isLeftEyeClosed && isRightEyeClosed;
@@ -149,10 +154,9 @@ namespace Metaface.Utilities
             {
                 isEyeClosed = true;
                 ballToggleCount++;
-                // 切换是否允许眼动追踪（开启或关闭 GazeIndicator）
+                // 切换眼动追踪状态：开启或关闭 gazeIndicator
                 isEyeGazeActive = !isEyeGazeActive;
                 gazeIndicator.SetActive(isEyeGazeActive);
-
                 Log($"Blink detected. isEyeGazeActive: {isEyeGazeActive}, BallToggleCount: {ballToggleCount}");
             }
             else if (!eyesClosed)
@@ -163,24 +167,36 @@ namespace Metaface.Utilities
         #endregion
 
         #region Raycasting & Gaze Sampling
-        private bool RaycastMidEye(OVREyeGaze gazeL, OVREyeGaze gazeR, out RaycastHit hit, LineRenderer visualRay, float distance = 1000f)
+        // 计算左右眼的平均 forward，并使用 Quaternion.Euler 叠加偏移
+        private bool RaycastMidEye(out RaycastHit hit, LineRenderer visualRay, float distance = 1000f)
         {
-            adjustedEyeL = gazeL.transform;
-            adjustedEyeR = gazeR.transform;
-            adjustedEyeL.eulerAngles = gazeL.transform.eulerAngles + new Vector3(eyeXOffset, eyeYOffset, 0f);
-            adjustedEyeR.eulerAngles = gazeR.transform.eulerAngles + new Vector3(eyeXOffset, eyeYOffset, 0f);
-
-            Vector3 midPosition = (adjustedEyeL.position + adjustedEyeR.position) / 2;
-            Vector3 midDirection = ((adjustedEyeL.forward + adjustedEyeR.forward) / 2).normalized;
-            // 保存采样到的视线方向（眼动采样数据）
-            gazeDirection = midDirection;
-
-            if (showRays)
+            hit = default;
+            if (leftEye == null || rightEye == null)
             {
-                visualRay.SetPositions(new Vector3[] { midPosition, midPosition + midDirection * distance });
+                return false;
             }
 
-            bool didHit = Physics.Raycast(midPosition, midDirection, out hit, distance);
+            // 读取左右眼原始 forward，不修改眼球的 transform
+            Vector3 rawForwardL = leftEye.transform.forward;
+            Vector3 rawForwardR = rightEye.transform.forward;
+            Vector3 avgForward = ((rawForwardL + rawForwardR) / 2f).normalized;
+
+            // 生成偏移旋转，叠加 eyeXOffset、eyeYOffset（单位：角度）
+            Quaternion offsetRot = Quaternion.Euler(eyeXOffset, eyeYOffset, 0f);
+            Vector3 targetDirection = offsetRot * avgForward;
+
+            // 对前一帧的 gazeDirection 使用 Slerp 平滑过渡到新方向
+            gazeDirection = Vector3.Slerp(gazeDirection, targetDirection, Time.deltaTime * 8f);
+
+            // 计算两个眼睛的位置平均值作为 Raycast 起点
+            Vector3 midPosition = (leftEye.transform.position + rightEye.transform.position) / 2f;
+
+            if (showRays && visualRay != null)
+            {
+                visualRay.SetPositions(new Vector3[] { midPosition, midPosition + gazeDirection * distance });
+            }
+
+            bool didHit = Physics.Raycast(midPosition, gazeDirection, out hit, distance);
             Log($"Raycast hit: {didHit}, Position: {(didHit ? hit.point.ToString("F2") : "N/A")}");
             return didHit;
         }
@@ -191,10 +207,9 @@ namespace Metaface.Utilities
         {
             if (didHit && isEyeGazeActive)
             {
-                // 使用 SmoothDamp 平滑更新 _smoothedPosition，使 gazeIndicator 跟踪射线击中点
+                // 用 SmoothDamp 平滑更新 gazeIndicator 位置
                 _smoothedPosition = Vector3.SmoothDamp(_smoothedPosition, hit.point, ref _velocity, smoothingTime);
                 gazeIndicator.transform.position = _smoothedPosition;
-                // 更新记录的 focusPosition
                 focusPosition = _smoothedPosition.ToString("F2");
 
                 if (!isGazing)
@@ -207,6 +222,7 @@ namespace Metaface.Utilities
                 totalGazeTime += Time.deltaTime;
                 Log($"Gaze Timer: {gazeTimer}, Total Gaze Time: {totalGazeTime}");
 
+                // 当持续凝视时间超过阈值时，激活蓝色状态
                 if (gazeTimer >= gazeThreshold && !isBlueActive)
                 {
                     isBlueActive = true;
@@ -247,6 +263,7 @@ namespace Metaface.Utilities
             if (isBlueActive)
             {
                 currentColor = Color.blue;
+                // 蓝色状态时将 scale 放大（例如放大 2.5 倍）
                 currentScale = originalScale * 2.5f;
             }
             else
@@ -275,14 +292,14 @@ namespace Metaface.Utilities
             {
                 string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 string ballColorString = GetBallColorString();
-                string eyeClosedStatus = !isEyeGazeActive ? "True" : "False";
+                string eyeClosedStatus = (!isEyeGazeActive).ToString();
                 string leftEyePos = $"\"{FormatVector3(leftEye.transform.position)}\"";
                 string rightEyePos = $"\"{FormatVector3(rightEye.transform.position)}\"";
                 string gazeDirectionStr = $"\"{FormatVector3(gazeDirection)}\"";
-                string focusPositionQuoted = $"\"{focusPosition}\"";
+                string focusPosQuoted = $"\"{focusPosition}\"";
                 string formattedScaleQuoted = $"\"{FormatVector3(currentScale)}\"";
 
-                string line = $"{timestamp},{totalGazeTime:F2},{isGazing},{eyeClosedStatus},{focusPositionQuoted},{gazeDirectionStr},{leftEyePos},{rightEyePos},{ballColorString},{formattedScaleQuoted},{blueTriggerCount},{ballToggleCount}\n";
+                string line = $"{timestamp},{totalGazeTime:F2},{isGazing},{eyeClosedStatus},{focusPosQuoted},{gazeDirectionStr},{leftEyePos},{rightEyePos},{ballColorString},{formattedScaleQuoted},{blueTriggerCount},{ballToggleCount}\n";
                 File.AppendAllText(path, line);
             }
             catch (Exception ex)
@@ -310,6 +327,7 @@ namespace Metaface.Utilities
 
         private void SetMaterialToFadeMode(Material mat)
         {
+            if (mat == null) return;
             mat.SetFloat("_Mode", 2);
             mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
             mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
@@ -338,27 +356,6 @@ namespace Metaface.Utilities
         #endregion
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

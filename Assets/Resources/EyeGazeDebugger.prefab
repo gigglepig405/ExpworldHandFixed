@@ -160,6 +160,7 @@ MonoBehaviour:
   enableLogging: 0
   eyeXOffset: 0
   eyeYOffset: 0
+  smoothingTime: 0.05
 --- !u!114 &8186073983343494210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,9 +197,13 @@ MonoBehaviour:
   midRayOB: {fileID: 9030036015947879322}
   showRays: 1
   maxGazeDistance: 1000
+  enableLogging: 0
   eyeXOffset: 0
   eyeYOffset: 0
+  gazeThreshold: 5
+  eyeCloseThreshold: 1.5
   focusOBJ: 
+  smoothingTime: 0.05
 --- !u!114 &3680906975664830777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,11 +242,13 @@ MonoBehaviour:
   midRayOB: {fileID: 9030036015947879322}
   showRays: 1
   maxGazeDistance: 1000
+  enableLogging: 0
   eyeXOffset: 0
   eyeYOffset: 0
   focusOBJ: 
   flashDuration: 5
   flashSpeed: 2
+  smoothingTime: 0.05
 --- !u!1 &3180565229093197469
 GameObject:
   m_ObjectHideFlags: 0
