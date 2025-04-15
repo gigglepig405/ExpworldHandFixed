@@ -63,7 +63,6 @@ namespace Metaface.Utilities
         private Coroutine flashCoroutine;
         [SerializeField] private float flashDuration = 5f;
         [SerializeField] private float flashSpeed = 2f;
-
         private float autoFlashTimer = 0f;
         private float autoFlashInterval = 30f;
 
@@ -84,9 +83,8 @@ namespace Metaface.Utilities
         {
             // 初始化组件
             midRay = midRayOB.GetComponent<LineRenderer>();
+            // 假设 gazeIndicator 为当前对象下的第二个子物体
             gazeIndicator = transform.GetChild(1).gameObject;
-
-            // 添加 MeshRenderer 如果不存在
             if (gazeIndicator.GetComponent<Renderer>() == null)
             {
                 var renderer = gazeIndicator.AddComponent<MeshRenderer>();
@@ -113,8 +111,10 @@ namespace Metaface.Utilities
             string timestampFile = DateTime.Now.ToString("yyyyMMdd_HHmmss");
             path = Path.Combine(directory, $"GazeMLSummary_{timestampFile}.csv");
 
-            // CSV 表头
-            File.AppendAllText(path, "Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition,GazeDirection,LeftEyePosition,RightEyePosition,BallColor,BallScale,TriggerCount,BallToggleCount\n");
+            // 使用 File.WriteAllText 写入表头，只写一次（避免多次追加导致多写一行）
+            string header = "Timestamp,TotalGazeTime,IsGazing,EyeClosed,FocusPosition," +
+                            "GazeDirection,LeftEyePosition,RightEyePosition,BallColor,BallScale,TriggerCount,BallToggleCount\r\n";
+            File.WriteAllText(path, header);
         }
 
         void Update()
@@ -157,7 +157,7 @@ namespace Metaface.Utilities
         {
             if (leftEye == null || rightEye == null) return;
 
-            // 这里使用 Dot 产品简单判断眼睛是否闭合：当前策略是检测眼睛是否大部分向下
+            // 使用 Dot 产品简单判断眼睛是否闭合：检测眼睛是否大部分向下
             bool isLeftEyeClosed = Vector3.Dot(leftEye.transform.forward, Vector3.down) > 0.85f;
             bool isRightEyeClosed = Vector3.Dot(rightEye.transform.forward, Vector3.down) > 0.85f;
             bool eyesClosed = isLeftEyeClosed && isRightEyeClosed;
@@ -187,7 +187,7 @@ namespace Metaface.Utilities
         #endregion
 
         #region Raycasting & Gaze Sampling
-        // 不再直接修改 OVREyeGaze 的 transform，采用本地变量计算方向
+        // 不直接修改 OVREyeGaze 的 transform，采用本地变量计算方向
         private bool RaycastMidEye(out RaycastHit hit, LineRenderer visualRay, float distance = 1000f)
         {
             hit = default;
@@ -205,7 +205,7 @@ namespace Metaface.Utilities
             Quaternion offsetRot = Quaternion.Euler(eyeXOffset, eyeYOffset, 0f);
             targetGazeDirection = offsetRot * avgForward;
 
-            // 可选：对 gazeDirection 使用 Slerp 平滑（平滑因子可调节）
+            // 对 gazeDirection 使用 Slerp 平滑
             gazeDirection = Vector3.Slerp(gazeDirection, targetGazeDirection, Time.deltaTime * 8f);
 
             // 起点采用两眼位置平均计算
@@ -229,7 +229,7 @@ namespace Metaface.Utilities
         {
             if (didHit && isEyeGazeActive)
             {
-                // 平滑更新 gazeIndicator 位置
+                // 使用 SmoothDamp 平滑更新 gazeIndicator 位置
                 _smoothedPosition = Vector3.SmoothDamp(_smoothedPosition, hit.point, ref _velocity, smoothingTime);
                 gazeIndicator.transform.position = _smoothedPosition;
 
@@ -275,7 +275,7 @@ namespace Metaface.Utilities
 
             while (elapsed < duration)
             {
-                // 通过 PingPong 函数让透明度在 0.2 到 0.6 之间变化
+                // 通过 PingPong 函数使透明度在 0.2 到 0.6 间变化
                 float t = Mathf.PingPong(Time.time * flashSpeed, 1f);
                 float alpha = Mathf.Lerp(0.2f, 0.6f, t);
                 mat.color = new Color(0f, 0f, 1f, alpha);
@@ -303,7 +303,7 @@ namespace Metaface.Utilities
                 // 当前时间戳
                 string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                // FocusPosition（用引号包裹防止逗号问题）
+                // FocusPosition（用引号包裹防止逗号问题），如果不在凝视状态则显示 "None"
                 string focusPos = isGazing ? gazeIndicator.transform.position.ToString("F2") : "None";
                 string focusPosQuoted = $"\"{focusPos}\"";
 
@@ -312,7 +312,7 @@ namespace Metaface.Utilities
                 string leftEyePos = $"\"{FormatVector3(leftEye.transform.position)}\"";
                 string rightEyePos = $"\"{FormatVector3(rightEye.transform.position)}\"";
 
-                // 简单判断当前颜色：黄色或蓝色
+                // 判断颜色：如果材质颜色近似纯黄色则为 Yellow，否则为 Blue
                 var matColor = gazeIndicator.GetComponent<Renderer>().material.color;
                 string ballColorStr = (Mathf.Abs(matColor.r - 1f) < 0.01f && Mathf.Abs(matColor.g - 1f) < 0.01f && matColor.b < 0.1f)
                     ? "Yellow"
@@ -320,9 +320,10 @@ namespace Metaface.Utilities
 
                 string ballScaleQuoted = $"\"{FormatVector3(gazeIndicator.transform.localScale)}\"";
 
-                // EyeClosed：取 isEyeGazeActive 的反值
+                // EyeClosed 状态：取 isEyeGazeActive 的反值
                 string eyeClosedStr = (!isEyeGazeActive).ToString();
 
+                // 构造 CSV 数据行（末尾只添加一个换行符，避免多余空行）
                 string line = $"{timestamp}," +
                               $"{totalGazeTime:F2}," +
                               $"{isGazing}," +
@@ -334,7 +335,7 @@ namespace Metaface.Utilities
                               $"{ballColorStr}," +
                               $"{ballScaleQuoted}," +
                               $"{triggerCount}," +
-                              $"{ballToggleCount}\n";
+                              $"{ballToggleCount}\r\n";
 
                 File.AppendAllText(path, line);
             }
